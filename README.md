@@ -1,6 +1,6 @@
 # Porto Ghost theme Development
 
-This is a trial clone of the Porto Ghost Theme.
+This is a trial clone of the [Porto](https://preview.themeforest.net/item/porto-multipurpose-ghost-blog-theme/full_screen_preview/47642992?_ga=2.201244846.1280405767.1711013921-157756745.1697547339) Ghost Theme.
 For learning purposes only.
 
 **Goals**:
