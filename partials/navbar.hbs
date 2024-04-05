@@ -3,7 +3,7 @@
     <div class="flex gap-8 items-center">
         <!-- Dynamic injection of site logo or title -->
       {{#if @site.logo}}
-      <a href="{{@site.url}}"><img src="{{@site.logo}}" alt="Blog Logo" /></a>
+      <a href="{{@site.url}}"><img src="{{@site.logo}}" alt="Blog Logo" class="invert dark:invert-0" /></a>
     {{else}}
       <div class="text-4xl font-serif">{{@site.title}}</div>
     {{/if}}
