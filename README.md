@@ -9,8 +9,7 @@ For learning purposes only.
 - Make the Theme Toggle functional
 - Add a Hero Section
 
-There is essentially no CSS - the only CSS rules definted are those necessary
-to pass gscan - and those rules don't do anything.
+CSS is only included for the darmode theme partial,, Everything else uses Tailwind css.
 
 ## Prerequisites
 
