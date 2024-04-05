@@ -23,9 +23,9 @@
   </head>
   <body  {{#match @custom.color_scheme "Dark"}} class="bg-secondary-950 text-secondary-100 max-w-[1400px] mx-auto text-lg" {{else}} class="bg-slate-700 text-lg max-w-[1400px] mx-auto"{{/match}}>
 
-    {{navigation}}
+    {{> navbar}}
     {{{body}}}
-
+    {{> footer}}
     {{ghost_foot}}
   </body>
 </html>
