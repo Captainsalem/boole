@@ -1,46 +1,22 @@
-# barebones Ghost theme
+# Porto Ghost theme Development
 
-The most basic Ghost theme possible.  This Ghost theme contains the least amount of code necessary to
-satisfy the following goals.
+This is a trial clone of the Porto Ghost Theme.
+For learning purposes only.
 
 **Goals**:
-* Pass gscan
-* Show posts and post content
-* Generate a zip file for installation
+
+- Make Navbar fully responsive
+- Make the Theme Toggle functional
+- Add a Hero Section
 
 There is essentially no CSS - the only CSS rules definted are those necessary
 to pass gscan - and those rules don't do anything.
 
 ## Prerequisites
-* NodeJS (v10.17.x)
-* git (optional)
 
-## Setup
-Either clone this repo or download the tarball/zip file, then install the package
-dependencies.
+- NodeJS (v18.12.x)
+- git
 
-```shell script
-npm install
-```
+This repository is maintained by [J4y Jeff](https://www.geekbits.io/author/j4y-j3ff/).
 
-## Build
-After setup is completed (once), the build commands are essentially the same as
-the default Casper theme.
-
-```shell script
-npm run zip
-```
-
-There is also a development mode that supports livereload.
-```shell script
-npm run dev
-```
-
-## Installation
-After `zip` completes successfully, install the resulting bundle from the
-`dist` directory using the Ghost admin interface.
-
-***
-
-This repository is maintained by [Ghoststead](https://www.ghoststead.com).
 # porto

@@ -1,0 +1,31 @@
+<div>
+  <input type="checkbox" class="dm-checkbox" id="dm-checkbox" />
+  <label for="dm-checkbox" class="dm-checkbox-label">
+    <ico>🌙</ico>
+    <ico>☀️</ico>
+    <span class="ball"></span>
+  </label>
+</div>
+
+{{#match @custom.color_scheme "Dark"}}
+  <div
+    class="bg-secondary-950 text-secondary-100 max-w-[1400px] mx-auto"
+    id="content"
+  >
+    <!-- Your content here -->
+  </div>
+{{else}}
+  <div class="bg-slate-700 max-w-[1400px] mx-auto" id="content">
+    <!-- Your content here -->
+  </div>
+{{/match}}
+
+<script>
+  const checkbox = document.getElementById('dm-checkbox'); const content =
+  document.getElementById('content'); checkbox.addEventListener('change', () =>
+  { if (checkbox.checked) { content.classList.remove('bg-slate-700',
+  'text-secondary-100'); content.classList.add('bg-secondary-950',
+  'text-secondary-100'); } else { content.classList.remove('bg-secondary-950',
+  'text-secondary-100'); content.classList.add('bg-slate-700',
+  'text-secondary-100'); } });
+</script>
