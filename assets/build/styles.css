@@ -652,6 +652,22 @@ video {
   color: rgb(236 236 242 / var(--tw-text-opacity));
 }
 
+/* kg css classes */
+
+.kg-width-wide {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.kg-width-full {
+  @media (--mq-md) {
+    max-width: 100vw;
+
+    border-radius: 0;
+  }
+}
+
 .dm-checkbox {
   opacity: 0;
   position: absolute;
