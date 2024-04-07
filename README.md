@@ -5,9 +5,10 @@ For learning purposes only.
 
 **Goals**:
 
-- Make Navbar fully responsive
-- Make the Theme Toggle functional
-- Add a Hero Section
+- @J4yJ3ff -> Polish the tags and authors page (responsivity as well).
+- @Captainsalem -> Work on the page for each tag and author.
+- @J4yJ3ff -> ...
+- @Captainsalem -> Work on release version of the theme.
 
 CSS is only included for the darmode theme partial,, Everything else uses Tailwind css.
 
@@ -15,6 +16,24 @@ CSS is only included for the darmode theme partial,, Everything else uses Tailwi
 
 - NodeJS (v18.12.x)
 - git
+
+## How to Run
+Navigate to the themes folder in your ghost installation.
+```bash
+$ cd path/to/ghost/content/themes
+```
+Next, clone the repo
+```bash
+$ git clone https://github.com/J4yJ3ff/porto.git
+```
+Install the required packages:
+```bash
+$ npm install
+```
+Run the build script:
+```bash
+$ npm run start
+```
 
 This repository is maintained by [J4y Jeff](https://www.geekbits.io/author/j4y-j3ff/).
 
