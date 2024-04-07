@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+.kg-width-wide,
+.kg-content-wide > div {
+    grid-column: wide-start / wide-end;
+}
+
+.kg-width-full {
+    grid-column: full-start / full-end;
+    @apply w-full rounded-lg;
+}
+
+.kg-width-full img {
+    width: 100%;
+}
+
 .display-none {
   @apply hidden;
 }
