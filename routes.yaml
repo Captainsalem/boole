@@ -1,0 +1,41 @@
+# to ensure tags and upcoming pages work, upload this file to your server
+#  some pages are unimplemented but upcoming.
+routes:
+  /signup/: 
+    template: signup
+    # data: page.signup # When implemented data will be taken from the  "/signup/" page
+  /signin/: 
+    template: signin
+    # data: page.signin # When implemented data will be taken from the  "/signin/" page
+  /account/: 
+    template: account 
+    # data: page.account # When implemented data will be taken from the  "/account/" page
+  /membership/:
+    template: membership
+    # data: page.membership # When implemented data will be taken from the  "/membership/" page
+  /authors/:
+    template: authors
+    # data: page.authors # When implemented data will be taken from the  "/authors/" page
+  /tags/:
+    template: tags
+    # data: page.tags # active - data is be taken from the  "/tags/" page
+  /search/:
+    template: search
+  /recommendations/:
+    template: recommend
+    # data: page.recommendations # When implemented data will be taken from the  "/recommendations/" page
+
+  # Channel
+  /archive/: 
+    controller: channel
+    template: archive
+    # data: page.archive # When implemented data will be taken from the  "/archive/" page
+
+collections:
+  /:
+    permalink: /{slug}/
+    template: index
+  
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
