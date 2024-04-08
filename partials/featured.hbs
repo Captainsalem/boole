@@ -58,3 +58,27 @@
     </article>
   </div>
 {{/post}}
+
+    <style>
+        /* featured image margin top*/
+        .featured {
+            margin-top: 8rem;
+        }
+
+        .reverse-me {
+            flex-direction: row-reverse;
+        }
+
+        .gradient-underline::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to bottom left, #9d50bb, #6e48aa, #0F2027);
+            transition: width .3s ease-in-out;
+        }
+
+        .gradient-underline:hover::after {
+            width: 100%;
+        }
+    </style>
