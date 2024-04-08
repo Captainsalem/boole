@@ -18,23 +18,31 @@ CSS is only included for the darmode theme partial,, Everything else uses Tailwi
 - git
 
 ## How to Run
+
 Navigate to the themes folder in your ghost installation.
+
 ```bash
 $ cd path/to/ghost/content/themes
 ```
+
 Next, clone the repo
+
 ```bash
 $ git clone https://github.com/J4yJ3ff/porto.git
 ```
+
 Install the required packages:
+
 ```bash
 $ npm install
 ```
+
 Run the build script:
+
 ```bash
 $ npm run start
 ```
 
-This repository is maintained by [J4y Jeff](https://www.geekbits.io/author/j4y-j3ff/).
+This repository is maintained by [J4y Jeff](https://www.geekbits.io/author/j4y-j3ff/) & [Captain Salem](https://www.geekbits.io/author/csalem/).
 
 # porto
