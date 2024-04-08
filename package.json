@@ -32,19 +32,20 @@
   },
   "config": {
     "posts_per_page": 5,
-     "custom": {
-       "color_scheme": {
-         "type": "select",
-         "options": [
-           "Light",
-           "Dark",
-           "Auto"
-         ],
-         "default": "Light"
-    }
+    "custom": {
+      "color_scheme": {
+        "type": "select",
+        "options": [
+          "Light",
+          "Dark",
+          "Auto"
+        ],
+        "default": "Light"
+      }
     }
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.12",
     "nodemon": "^3.1.0"
   }
 }
