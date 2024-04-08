@@ -1,6 +1,104 @@
 {{!< default}}
 {{#post}}
-    <h1>{{title}}</h1>
-    <h2>post.hbs</h2>
-    {{content}}
+<main class="md:flex-grow, px-1 block">
+<div class="single-post container mx-auto max-w-3xl pr-4 pl-4 ml-auto mr-auto">
+<article class="mt-0 mr-auto mb-0 ml-0">
+<div class="post-header max-w-3xl mt-0 mr-auto mb-8 ml-0">
+
+
+{{! tag list }}
+<div class="tag-list flex flex-wrap">
+  <button type="button" class="flex items-center justify-center gap-2 text-white text-xs bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg px-3 py-1.5 text-center me-2 mb-2">
+        {{#if featured}}
+      <span class="w-4 h-4 inline-flex items-center justify-center">
+        {{> "icons/fire"}}
+      </span>
+    {{/if}}
+    <a href="{{primary_tag.url}}" class="inline-block">
+      {{primary_tag.name}}
+    </a>
+  </button>
+</div>
+
+
+{{! post title }}
+<h1 class="mb-4 mt-4 text-4xl font-bold leading-snug tracking-tight text-gray-900 md:text-4xl lg:text-4xl dark:text-white">{{title}}</h1>
+
+{{! post excerpt }}
+<div class="post-excerpt text-justify justify-start mb-2 h-auto overflow-hidden max-w-3xl">
+    {{#if custom_excerpt}}
+    <p class="text-left rtl:text-right text-gray-500 dark:text-gray-400">{{custom_excerpt}}</p>
+{{/if}}
+</div>
+
+
+{{! post meta }}
+<div class="flex flex-wrap items-center">
+<div class="flex flex-wrap mr-5">
+    {{#foreach authors}}
+        <a href="{{url}}" class="author-image-wrap block w-10 h-10 -mr-3 relative p-1 bg-white dark:bg-inherit" title="{{name}}">
+            <img src="{{profile_image}}" class="rounded-full hover:opacity-100 border-2 border-purple-500" alt="{{name}}">
+        </a>
+    {{/foreach}}
+</div>
+
+<div class="author-names flex flex-wrap items-center">
+    {{#foreach authors}}
+        <a href="{{url}}" class="font-normal capitalize text-xs dark:text-inherit hover:underline">{{name}}</a>
+        {{#unless @last}}|{{/unless}}
+    {{/foreach}}
+</div>
+
+<span class="inline-flex items-center text-xs">
+{{#if reading_time}}
+    {{!-- <span class="w-4 h-4 mr-1">{{> "icons/clock"}}</span> --}}
+    <span class="ml-2 mr-2 align-middle">{{reading_time}}</span>
+{{/if}}
+</span>
+
+<time class="post-date inline-flex items-center mr-5 text-xs" datetime="{{date format='YYYY-MM-DD'}}">
+    {{!-- {{> "icons/calendar" class="align-middle mr-1"}} --}}
+    <span class="align-middle">{{date format="MMMM DD, YYYY"}}</span>
+</time>
+</div>
+
+
+{{! featured image }}
+{{#if feature_image}}
+    <figure class="max-w-3xl mt-10 mb-10 mx-auto">
+        <img
+            class="w-full rounded-lg"
+            srcset="{{img_url feature_image size="s"}} 300w,
+                    {{img_url feature_image size="m"}} 600w,
+                    {{img_url feature_image size="l"}} 1000w,
+                    {{img_url feature_image size="xl"}} 2000w"
+            sizes="(max-width: 700px) 1400px, 92vw"
+            src="{{img_url feature_image size="xl"}}"
+            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+        />
+        {{#if feature_image_caption}}
+            <figcaption class="text-sm text-center mt-2">{{feature_image_caption}}</figcaption>
+        {{/if}}
+    </figure>
+{{/if}}
+
+{{! post content }}
+<div class="flex flex-wrap justify-center gap-8 max-w-3xl mr-auto ml-auto prose dark:prose-invert">
+    <div class="text-lg max-w-3xl min-w-96 flex-1 post-content">
+        {{content}}
+    </div>
+</div>
+
+
+{{! share article }}
+{{! featured articles }}
+{{! comments }}
 {{/post}}
+</div>
+</article>
+</div>
+</main>
+
+<style>
+</style>
+
