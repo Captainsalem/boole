@@ -16,11 +16,16 @@
       type="text/css"
       href="{{asset 'build/styles.css'}}"
     />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
     {{! This tag outputs SEO meta+structured data and other important settings }}
     {{ghost_head}}
     {{!-- This tag outputs scripts as saved in "code injection" scripts. --}}
     {{ghost_foot}}
+
+
   </head>
   <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-200 transition-colors duration-500 max-w-[1400px] mx-auto text-lg"></body>
     {{> navbar}}
