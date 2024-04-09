@@ -1,0 +1,84 @@
+{{#post}}
+  <div class="featured mx-auto max-w-7xl gap-8 justify-between flex flex-wrap">
+    <article
+      class="max-w-[512px] flex-grow flex-shrink basis-[280px] p-6 border-2 border-gray-100 dark:border-gray-800 flex flex-wrap rounded-lg"
+    >
+      <div class="mr-4 w-24 leading-6 rounded-lg">
+        {{#get "posts" filter="primary_tag:{{primary_tag.slug}}" limit="1"}}
+          {{#foreach posts}}
+            <a href="{{url}}" class="aspect-square block w-full bg-transparent">
+              <img
+                src="{{feature_image}}"
+                alt="{{title}}"
+                class="rounded-lg object-cover w-full h-full"
+              />
+            </a>
+          {{/foreach}}
+        {{/get}}
+      </div>
+      <div class="flex-grow flex-shrink basis-[120px] ml-2">
+        <div class="mb-2 uppercase text-xs leading-6">Newer Posts
+        </div>
+        <h3
+          class="h6 text-xl hover:text-purple-500 gradient-underline relative after:absolute after:inset-x-0 after:bottom-0 after:origin-bottom-left"
+        >
+          <a href="{{url}}">{{title}}</a>
+        </h3>
+      </div>
+    </article>
+    <article
+      class="max-w-[512px] flex-grow flex-shrink basis-[280px] p-6 border-2 border-gray-100 dark:border-gray-800 flex flex-wrap rounded-lg reverse-me"
+    >
+      <div class="mr-4 w-24 leading-6 rounded-lg">
+        {{#get
+          "posts"
+          filter="primary_tag:{{primary_tag.slug}}+published_at:<='{{published_at}}'"
+          limit="1"
+        }}
+          {{#foreach posts}}
+            <a href="{{url}}" class="aspect-square block w-full bg-transparent">
+              <img
+                src="{{feature_image}}"
+                alt="{{title}}"
+                class="rounded-lg object-cover w-full h-full ml-2 text-right"
+              />
+            </a>
+          {{/foreach}}
+        {{/get}}
+      </div>
+      <div class="flex-grow flex-shrink basis-[120px] ml-2">
+        <div class="mb-2 uppercase text-xs leading-6">Older Post
+        </div>
+        <h3
+          class="h6 text-xl hover:text-purple-500 gradient-underline relative after:absolute after:inset-x-0 after:bottom-0 after:origin-bottom-left"
+        >
+          <a href="{{url}}">{{title}}</a>
+        </h3>
+      </div>
+    </article>
+  </div>
+{{/post}}
+
+    <style>
+        /* featured image margin top*/
+        .featured {
+            margin-top: 4rem;
+        }
+
+        .reverse-me {
+            flex-direction: row-reverse;
+        }
+
+        .gradient-underline::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to bottom left, #9d50bb, #6e48aa, #0F2027);
+            transition: width .3s ease-in-out;
+        }
+
+        .gradient-underline:hover::after {
+            width: 100%;
+        }
+    </style>
