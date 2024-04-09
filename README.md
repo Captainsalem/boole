@@ -6,7 +6,7 @@ For learning purposes only.
 **Goals**:
 
 - @J4yJ3ff -> Polish the tags and authors page (responsivity as well).
-- @Captainsalem -> Work on the page for each tag and author.
+- @Captainsalem -> Work on the Membership Page
 - @J4yJ3ff -> ...
 - @Captainsalem -> Work on release version of the theme.
 
