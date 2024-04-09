@@ -9,8 +9,7 @@
     "ghost-theme"
   ],
   "engines": {
-    "ghost": ">=5.0.0",
-    "ghost-api": "v3"
+    "ghost": ">=5.0.0"
   },
   "scripts": {
     "restart": "nodemon default.hbs",
