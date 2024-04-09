@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [18.x]
 
     steps:
     - uses: actions/checkout@v3
@@ -33,8 +33,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ github.ref_name }} # Changed to use ref_name for just the tag
-        release_name: Release ${{ github.ref_name }}
+        tag_name: release-${{ github.ref_name }}-${{ github.run_number }}-${{ github.run_attempt }}
+        release_name: Release ${{ github.ref_name }}-${{ github.run_number }}-${{ github.run_attempt }}
         draft: false
         prerelease: true
 
