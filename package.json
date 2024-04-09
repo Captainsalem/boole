@@ -31,6 +31,7 @@
   },
   "config": {
     "posts_per_page": 5,
+    "card_assets": true,
     "custom": {
       "color_scheme": {
         "type": "select",
