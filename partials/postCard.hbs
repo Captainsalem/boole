@@ -1,16 +1,15 @@
-<div class="mx-auto grid justify-center  gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-  
-{{#get "posts"}}
+<div class="mx-auto my-20 grid justify-center  gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+{{#get "posts" include="tags,authors"}}
 {{#foreach posts}}
 
     <div
-      class="flex flex-col bg-white border gap-5 shadow-sm justify-between rounded-xl overflow-hidden p-6 hover:shadow-lg transition dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]"
+      class="flex flex-col bg-white border gap-5 shadow-sm rounded-xl overflow-hidden p-6 hover:shadow-lg transition dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]"
     >
         {{! img }}
         {{#if feature_image}}
-                <a href="{{url}}" class="border mx-auto block w-full h-[400px] overflow-hidden">
+                <a href="{{url}}" class="mx-auto block w-full">
                     <figure>
-                         <img class="w-full h-full rounded-lg object-contain inset-0" srcset="{{img_url feature_image size=" s"}} 300w, {{img_url
+                         <img class="w-full h-[400px] rounded-lg object-cover inset-0" srcset="{{img_url feature_image size=" s"}} 300w, {{img_url
                             feature_image size="m" }} 600w, {{img_url feature_image size="l" }} 1000w, {{img_url
                             feature_image size="xl" }} 2000w" sizes="(max-width: 700px) 1400px, 92vw"
                             src="{{img_url feature_image size=" xl"}}"
@@ -18,38 +17,75 @@
                     </figure>
                 </a>
         {{/if}}
+
+
         {{! tag }}
-
-
-        <div class="tag-list flex flex-wrap">
-            <button type="button"
-                class="flex items-center justify-center gap-2 text-white text-xs bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg px-3 py-1.5 text-center me-2 mb-2">
-                {{#if featured}}
-                <span class="w-4 h-4 inline-flex items-center justify-center">
-                    {{> "icons/fire"}}
-                </span>
-                {{/if}}
-                <a href="{{primary_tag.url}}" class="inline-block">
-                    {{primary_tag.name}}
+        <div>
+            <div class=" flex flex-wrap">
+                <a href="{{primary_tag.url}}">
+                    <div class=" flex gap-1.5 items-center justify-center text-white text-xs bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg px-3 py-1.5">
+                            
+                    {{#if featured}}
+                    
+                        {{> "icons/fire"}}
+                    {{/if}}
+                    <p class="text-sm">{{primary_tag.name}}</p>
+                    </div>
                 </a>
-            </button>
-        </div>
+            </div>
 
-        {{! title  }}
 
-        <h1 class="mb-4 mt-4 text-4xl font-bold leading-snug tracking-tight text-gray-900 md:text-4xl lg:text-4xl dark:text-white">
-            {{title}}
-        </h1>
-        {{! excerpt }}
-        <div class="post-excerpt text-justify justify-start mb-2 h-auto overflow-hidden max-w-3xl">
+            {{! title  }}
+            <h2 class="mb-4 mt-4 text-2xl font-bold leading-snug tracking-tight text-gray-900 dark:text-white">
+                <a href="{{url}}">{{title}}</a>
+            </h2>
+
+
+            {{! excerpt }}
             {{#if custom_excerpt}}
-            <p class="text-left rtl:text-right text-gray-500 dark:text-gray-400">{{custom_excerpt}}</p>
+                <div class="post-excerpt text-justify justify-start mb-4 h-auto overflow-hidden max-w-3xl">   
+                    <p class="text-left rtl:text-right text-gray-500 dark:text-gray-400">{{custom_excerpt}}</p>   
+                </div>
             {{/if}}
-        </div>
-        {{! profile time  }}
 
+            {{! profile time  }}
+                <div class="flex flex-wrap gap-2 items-center justify-between text-sm">
+                    {{#if authors}}
+                        <div class="flex flex-wrap items-center"> 
+                        <a href="{{primary_author.url}}"
+                            class="author-image-wrap block relative bg-white dark:bg-inherit"
+                            title="{{author.name}}">
+                            <figure>
+                                <img src="{{img_url primary_author.profile_image}}"
+                                class="rounded-full w-10 h-10 object-cover inset-0 hover:opacity-100 border-2 border-purple-500" alt="avatar">
+                            </figure>
+                        </a>
+                    </div>
+                    {{/if}}
+
+                     
+                    <div class="flex items-center gap-2">
+                        {{#if reading_time}}
+                        <div class="flex gap-1 items-center">
+                            <span>{{> "icons/clock"}}</span>
+                            <span>{{reading_time}}</span>
+                        </div>
+                     {{/if}}
+
+                     <time class="post-date inline-flex items-center mr-5 "
+                        datetime="{{date format='YYYY-MM-DD'}}">
+                        {{!-- {{> "icons/calendar" class="align-middle mr-1"}} --}}
+                        <span class="align-middle">{{date format="MMMM DD, YYYY"}}</span>
+                    </time>
+                    </div>
+                </div>
+        </div>
 
 </div>
+<script>
+    console.log({{authors}})
+</script>
+
 {{/foreach}}
 {{/get}}
 </div>
