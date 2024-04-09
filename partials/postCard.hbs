@@ -1,0 +1,56 @@
+<div class="mx-auto grid justify-center  gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+  
+{{#get "posts"}}
+{{#foreach posts}}
+
+    <div
+      class="flex flex-col bg-white border gap-5 shadow-sm justify-between rounded-xl overflow-hidden p-6 hover:shadow-lg transition dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]"
+    >
+        {{! img }}
+        {{#if feature_image}}
+                <a href="{{url}}" class="border mx-auto block w-full h-[400px] overflow-hidden">
+                    <figure>
+                         <img class="w-full h-full rounded-lg object-contain inset-0" srcset="{{img_url feature_image size=" s"}} 300w, {{img_url
+                            feature_image size="m" }} 600w, {{img_url feature_image size="l" }} 1000w, {{img_url
+                            feature_image size="xl" }} 2000w" sizes="(max-width: 700px) 1400px, 92vw"
+                            src="{{img_url feature_image size=" xl"}}"
+                            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+                    </figure>
+                </a>
+        {{/if}}
+        {{! tag }}
+
+
+        <div class="tag-list flex flex-wrap">
+            <button type="button"
+                class="flex items-center justify-center gap-2 text-white text-xs bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg px-3 py-1.5 text-center me-2 mb-2">
+                {{#if featured}}
+                <span class="w-4 h-4 inline-flex items-center justify-center">
+                    {{> "icons/fire"}}
+                </span>
+                {{/if}}
+                <a href="{{primary_tag.url}}" class="inline-block">
+                    {{primary_tag.name}}
+                </a>
+            </button>
+        </div>
+
+        {{! title  }}
+
+        <h1 class="mb-4 mt-4 text-4xl font-bold leading-snug tracking-tight text-gray-900 md:text-4xl lg:text-4xl dark:text-white">
+            {{title}}
+        </h1>
+        {{! excerpt }}
+        <div class="post-excerpt text-justify justify-start mb-2 h-auto overflow-hidden max-w-3xl">
+            {{#if custom_excerpt}}
+            <p class="text-left rtl:text-right text-gray-500 dark:text-gray-400">{{custom_excerpt}}</p>
+            {{/if}}
+        </div>
+        {{! profile time  }}
+
+
+</div>
+{{/foreach}}
+{{/get}}
+</div>
+
