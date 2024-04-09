@@ -8,11 +8,11 @@
   <div class="mx-auto grid justify-center  gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
     {{#get "tags" include="count.posts" order="count.posts desc" limit="60"}}
       {{#foreach tags}}
-          <div class="flex flex-col bg-white border shadow-sm  justify-between rounded-xl overflow-hidden p-6 hover:shadow-lg transition  dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+          <div class="flex flex-col bg-transparent border-2 shadow-sm  justify-between rounded-2xl overflow-hidden p-6 hover:shadow-lg transition  dark:bg-transparent dark:border-gray-800 dark:shadow-slate-700/[.7]">
               <a href="/tag/{{slug}}">
                   <div class="relative mt-2">
                       <img
-                        class="w-full h-48 object-cover object-center rounded-lg"
+                        class="w-full h-48 object-cover object-center rounded-2xl"
                         src="{{feature_image}}"
                         alt="{{name}}"
                       />

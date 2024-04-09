@@ -1,0 +1,42 @@
+{{#post}}
+  {{#get
+    "posts" limit="4" filter="tags:[{{tags.[0].slug}}]+id:-{{id}}"
+    as |related_posts|
+  }}
+    <div class="featured">
+      <div
+        class="flex-grow-0 flex-shrink-0 basis-full max-w-full w-full pr-4 pl-4"
+      >
+        <h3 class="h4 text-left mt-0 leading-6">We think you'll like these:</h3>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        {{! Iterate over the related posts }}
+        {{#foreach related_posts}}
+          <div class="p-4 md:w-1/2 lg:w-1/4">
+            <article class="h-full rounded-lg overflow-hidden">
+              <a
+                href="{{url}}"
+                class="block w-full h-48 relative overflow-hidden"
+              >
+                <img
+                  src="{{feature_image}}"
+                  alt="{{title}}"
+                  class="rounded-lg object-cover object-center w-full h-full block"
+                />
+              </a>
+              <div class="p-6">
+                <h2 class="title-font text-lg font-medium mb-3 h5">
+                  <a
+                    href="{{url}}"
+                    class="text-gray-900 dark:text-gray-400 hover:text-red-600"
+                  >{{title}}</a>
+                </h2>
+              </div>
+            </article>
+          </div>
+        {{/foreach}}
+      </div>
+    </div>
+  {{/get}}
+
+{{/post}}
