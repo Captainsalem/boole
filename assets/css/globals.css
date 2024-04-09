@@ -28,7 +28,7 @@ h5, .h5 {
 h6, .h6 {
 	font-size: 1rem;
 }
-p {
+p ol {
   font-family: 'Inter';
   font-size: 14px;
   line-height: 1.6;
