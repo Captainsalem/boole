@@ -2063,8 +2063,13 @@ hr, blockquote, .kg-card.kg-header-card {
   border-radius: 0.5rem;
 }
 
-.kg-card .kg-image-card {
-  border-radius: 0.5rem;
+.kg-image-card {
+  img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .kg-card-hascaption {

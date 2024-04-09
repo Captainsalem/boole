@@ -53,8 +53,13 @@ hr, blockquote, .kg-card.kg-header-card {
     @apply rounded-lg;
 }
 
-.kg-card .kg-image-card {
-  @apply rounded-lg;
+.kg-image-card {
+  img {
+      max-width: 100%;
+      border-radius: 0.5rem;
+      margin-left: auto;
+      margin-right: auto;
+  }
 }
 
 .kg-card-hascaption {
