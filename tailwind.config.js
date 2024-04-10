@@ -36,6 +36,9 @@ module.exports = {
         aspectRatio: {
           '4/3': '4 / 3',
         },
+        zIndex: {
+          '2': '2',
+        }
       },
     },
   },
