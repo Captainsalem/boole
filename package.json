@@ -26,14 +26,14 @@
     "gulp-livereload": "^4.0.2",
     "gulp-zip": "^5.0.1",
     "postcss": "^8.4.38",
+    "preline": "^2.1.0",
     "pump": "^3.0.0",
     "tailwindcss": "^3.4.3"
   },
   "config": {
     "posts_per_page": 5,
     "card_assets": true,
-    "custom": {
-    }
+    "custom": {}
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.12",
