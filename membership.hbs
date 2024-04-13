@@ -1,0 +1,12 @@
+{{!< default }} {{#if @member.paid}} {{!-- Redirect --}} {{#if @custom.use_portal_links}} <script>window.location =
+  '{{@site.url}}/membership/#/portal/account/';</script>
+  {{else}}
+  <script>window.location = '{{@site.url}}/account/';</script>
+  {{/if}}
+  {{else if @member}}
+  {{!-- For free member show paid plans only --}}
+  {{> member-tiers type="paid"}}
+  {{else}}
+  {{!-- Show all plans --}}
+  {{> member-tiers type="free,paid"}}
+  {{/if}}
