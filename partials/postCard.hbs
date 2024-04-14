@@ -1,102 +1,13 @@
-<div class="mx-auto my-20 grid justify-center  gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-{{#get "posts" include="tags,authors"}}
-{{#foreach posts}}
-    <div
-      class="flex flex-col bg-white border gap-5 shadow-sm rounded-xl overflow-hidden p-6 hover:shadow-lg transition dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]"
-    >
-        {{! img }}
-        {{#if feature_image}}
-                <a href="{{url}}" class="mx-auto block w-full">
-                    <figure>
-                         <img class="w-full h-[400px] rounded-lg object-cover inset-0" srcset="{{img_url feature_image size=" s"}} 300w, {{img_url
-                            feature_image size="m" }} 600w, {{img_url feature_image size="l" }} 1000w, {{img_url
-                            feature_image size="xl" }} 2000w" sizes="(max-width: 700px) 1400px, 92vw"
-                            src="{{img_url feature_image size=" xl"}}"
-                            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
-                    </figure>
-                </a>
-        {{/if}}
-
-
-        {{! tag }}
-        <div>
-            <div class=" flex flex-wrap">
-                <a href="{{primary_tag.url}}">
-                    <div class=" flex gap-1.5 items-center justify-center text-white text-xs bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg px-3 py-1.5">    
-                    {{#if featured}}
-                        {{> "icons/fire"}}
-                    {{/if}}
-                    <p class="text-sm">{{primary_tag.name}}</p>
-                    </div>
-                </a>
-            </div>
-
-            {{! title  }}
-            <h2 class="mb-4 mt-4 text-2xl font-bold leading-snug tracking-tight text-gray-900 dark:text-white">
-                <a href="{{url}}">{{title}}</a>
-            </h2>
-
-
-            {{! excerpt }}
-            {{#if custom_excerpt}}
-                <div class="post-excerpt text-justify justify-start mb-4 h-auto overflow-hidden max-w-3xl">   
-                    <p class="text-left rtl:text-right text-gray-500 dark:text-gray-400">{{custom_excerpt}}</p>   
-                </div>
-            {{/if}}
-
-            {{! profile time  }}
-                <div class="flex flex-wrap gap-2 items-center justify-between text-sm">
-                    {{#if authors}}
-                        <div class="flex flex-wrap items-center"> 
-                        <a href="{{primary_author.url}}"
-                            class="author-image-wrap block relative bg-white dark:bg-inherit"
-                            title="{{author.name}}">
-                            <figure>
-                                <img src="{{img_url primary_author.profile_image}}"
-                                class="rounded-full w-10 h-10 object-cover inset-0 hover:opacity-100 border-2 border-purple-500" alt="avatar">
-                            </figure>
-                        </a>
-                    </div>
-                    {{/if}}
-
-                     
-                    <div class="flex items-center gap-2">
-                        {{#if reading_time}}
-                        <div class="flex gap-1 items-center">
-                            <span>{{> "icons/clock"}}</span>
-                            <span>{{reading_time}}</span>
-                        </div>
-                     {{/if}}
-
-                     <time class="post-date inline-flex items-center mr-5 "
-                        datetime="{{date format='YYYY-MM-DD'}}">
-                        {{!-- {{> "icons/calendar" class="align-middle mr-1"}} --}}
-                        <span class="align-middle">{{date format="MMMM DD, YYYY"}}</span>
-                    </time>
-                    </div>
-                </div>
-        </div>
-
-</div>
-
-{{/foreach}}
-{{/get}}
-</div>
-
-
-
 
 <div class="mx-auto my-20 grid justify-center gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
 {{#get "posts" include="tags,authors"}}
 {{#foreach posts}}
-    <div class="relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md hover:shadow-lg transition" style="height: 100%;">
+    <div class="relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white dark:bg-gray-900 bg-clip-border text-gray-700 dark:text-gray-400 shadow-md hover:shadow-lg transition" style="height: 100%;">
         {{#if feature_image}}
             <a href="{{url}}" class="block w-full overflow-hidden">
                 <img src="{{img_url feature_image size="xl"}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" class="w-full h-[200px] object-cover" />
             </a>
         {{/if}}
-
-        
         <div class="flex flex-col justify-between flex-grow p-6">
             <div>
                 <h4 class="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
@@ -114,7 +25,7 @@
                 </div>
                 </a>
                 {{#if custom_excerpt}}
-                    <p class="block mt-3 font-sans antialiased leading-relaxed text-gray-700">
+                    <p class="block mt-3 font-sans antialiased leading-relaxed text-gray-700 dark:text-gray-400">
                         {{custom_excerpt}}
                     </p>
                 {{/if}}
