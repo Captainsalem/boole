@@ -10,6 +10,20 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 1rem;
 
 }
+.single-post {
+  font-family: 'Inter', sans-serif;
+}
+
+.single-post h1,
+.single-post h2,
+.single-post h3,
+.single-post h4,
+.single-post h5,
+.single-post h6,
+.single-post p {
+  font-family: inherit;  /* Ensures headings and paragraphs use the same font */
+}
+
 h1, .h1 {
 	font-size: 3rem;
 }

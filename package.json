@@ -21,12 +21,15 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
+    "flowbite-typography": "^1.0.3",
     "gscan": "^3.5.1",
     "gulp": "^4.0.2",
     "gulp-livereload": "^4.0.2",
     "gulp-zip": "^5.0.1",
     "postcss": "^8.4.38",
     "preline": "^2.1.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.13",
     "pump": "^3.0.0",
     "tailwindcss": "^3.4.3"
   },
