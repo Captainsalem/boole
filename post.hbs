@@ -58,14 +58,14 @@
 
                     <span class="inline-flex items-center text-xs">
                         {{#if reading_time}}
-                        {{!-- <span class="w-4 h-4 mr-1">{{> "icons/clock"}}</span> --}}
-                        <span class="ml-2 mr-2 align-middle">{{reading_time}}</span>
+                        <span class=" ml-2 mr-1">{{> "icons/clock"}}</span>
+                        <span class="align-middle">{{reading_time}}</span>
                         {{/if}}
                     </span>
 
                     <time class="post-date inline-flex items-center mr-5 text-xs"
                         datetime="{{date format='YYYY-MM-DD'}}">
-                        {{!-- {{> "icons/calendar" class="align-middle mr-1"}} --}}
+                        <span class=" ml-2 mr-1">{{> "icons/calendar"}}</span>
                         <span class="align-middle">{{date format="MMMM DD, YYYY"}}</span>
                     </time>
                 </div>
