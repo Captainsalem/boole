@@ -159,8 +159,9 @@
                                 </a>
                                 
                                 {{!-- Copy Link --}}
-                                <a class="inline-flex items-center justify-center bg-gray-200 dark:bg-gray-700 rounded-full hover:bg-gradient-to-bl from-purple-500 via-violet-600 to-blue-600 hover:text-white relative"
-                                    href="#" onclick="copyLinkToClipboard(); return false;"
+                                <a class="copy-link copy copy-link inline-flex items-center justify-center bg-gray-200 dark:bg-gray-700 rounded-full hover:bg-gradient-to-bl from-purple-500 via-violet-600 to-blue-600 hover:text-white relative"
+                                    href="#" onclick="copyLinkToClipboard(this); return false;"
+                                    data-url="{{url absolute='true'}}"
                                     data-clipboard-text="{{url absolute='true'}}" title="Copy the permalink"
                                     rel="noopener" style="width: 50px; height: 50px;">
                                     <svg style="width: 24px; height: 24px;" aria-hidden="true">
@@ -175,9 +176,20 @@
             </div>
         </article>
     </div>
-
-    
     </main>
     {{> featured }}
     {{> comments }}
     {{> related }}
+
+<script>
+    function copyLinkToClipboard(element) {
+    const url = element.getAttribute('data-url'); // Retrieve URL from data-url attribute
+    navigator.clipboard.writeText(url) // Use Clipboard API to copy the URL
+    .then(() => {
+        console.log('URL copied to clipboard!'); // Success message
+    })
+    .catch(err => {
+        console.error('Failed to copy URL: ', err); // Error handling
+    });
+}
+</script>
