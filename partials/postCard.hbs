@@ -1,62 +1,62 @@
-
 <div class="mx-auto my-20 grid justify-center gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-{{#get "posts" include="tags,authors"}}
-{{#foreach posts}}
-    <div class="relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white dark:bg-gray-800 bg-clip-border text-gray-700 dark:text-gray-400 shadow-md hover:shadow-lg transition" style="height: 100%;">
+    {{#get "posts" limit="9" include="tags,authors"}}
+    {{#foreach posts}}
+    <div class="relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white dark:bg-gray-800 bg-clip-border text-gray-700 dark:text-gray-400 shadow-md hover:shadow-lg transition"
+        style="height: 100%;">
         {{#if feature_image}}
-            <a href="{{url}}" class="block w-full overflow-hidden">
-                <img src="{{img_url feature_image size="xl"}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" class="w-full h-[200px] object-cover" />
-            </a>
+        <a href="{{url}}" class="block w-full overflow-hidden">
+            <img src="{{img_url feature_image size="xl"}}"
+                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                class="w-full h-[200px] object-cover" />
+        </a>
         {{/if}}
         <div class="flex flex-col justify-between flex-grow p-6">
             <div>
-                <h4 class="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                <h4
+                    class="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
                     <a href="{{url}}">{{title}}</a>
                 </h4>
-                <div class=" flex flex-wrap">
-                <a href="{{primary_tag.url}}">
-                    <div class="flex gap-1.5 items-center justify-center text-white text-xs bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg px-3 py-1.5">
-                    {{#if featured}}
-                        {{> "icons/fire"}}
-                    {{/if}}
-                    <p class="text-sm">{{primary_tag.name}}</p>
+                <div class="flex flex-wrap">
+                    <a href="{{primary_tag.url}}">
+                        <div
+                            class="flex gap-1.5 items-center justify-center text-white text-xs bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg px-3 py-1.5">
+                            {{#if featured}}
+                            {{> "icons/fire"}}
+                            {{/if}}
+                            <p class="text-sm">{{primary_tag.name}}</p>
+                        </div>
+                    </a>
                 </div>
-                </a>
-                </div>
-                </a>
                 {{#if custom_excerpt}}
-                    <p class="block mt-3 font-sans antialiased leading-relaxed text-gray-700 dark:text-gray-400">
-                        {{custom_excerpt}}
-                    </p>
+                <p class="block mt-3 font-sans antialiased leading-relaxed text-gray-700 dark:text-gray-400">
+                    {{custom_excerpt}}
+                </p>
                 {{/if}}
             </div>
         </div>
 
-        <hr class=" mt-1 mb-0 dark:border-gray-800">
+        <hr class="mt-1 mb-0 dark:border-gray-800">
         <div class="flex items-center justify-between p-6">
             {{#if authors}}
-                <div class="flex items-center -space-x-3">
-                    <a href="{{primary_author.url}}" title="{{primary_author.name}}" class="block">
-                        <img src="{{img_url primary_author.profile_image}}" alt="avatar" class="relative inline-block h-9 w-9 !rounded-full border-2 border-white object-cover object-center hover:z-10">
-                    </a>
-                </div>
+            <div class="flex items-center -space-x-3">
+                <a href="{{primary_author.url}}" title="{{primary_author.name}}" class="block">
+                    <img src="{{img_url primary_author.profile_image}}" alt="avatar"
+                        class="relative inline-block h-9 w-9 !rounded-full border-2 border-white object-cover object-center hover:z-10">
+                </a>
+            </div>
             {{/if}}
             {{#if reading_time}}
-                        <div class="flex gap-1 items-center">
-                            <span>{{> "icons/clock"}}</span>
-                            <span class="text-sm">{{reading_time}}</span>
-                        </div>
-                     {{/if}}
-            <time class="block font-sans text-base antialiased font-normal leading-relaxed text-inherit" datetime="{{date format='YYYY-MM-DD'}}">
+            <div class="flex gap-1 items-center">
+                <span>{{> "icons/clock"}}</span>
+                <span class="text-sm">{{reading_time}}</span>
+            </div>
+            {{/if}}
+            <time class="block font-sans text-base antialiased font-normal leading-relaxed text-inherit"
+                datetime="{{date format='YYYY-MM-DD'}}">
                 {{date format="MMMM DD, YYYY"}}
             </time>
-            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg>
         </div>
     </div>
-{{/foreach}}
-{{/get}}
+    {{/foreach}}
+    {{/get}}
 </div>
-
-
-
-
