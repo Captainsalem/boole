@@ -1,7 +1,7 @@
 <div class="mx-auto my-20 grid justify-center gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
     {{#get "posts" limit="9" include="tags,authors"}}
     {{#foreach posts}}
-    <div class="relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white dark:bg-gray-800 bg-clip-border text-gray-700 dark:text-gray-400 shadow-md hover:shadow-lg transition"
+    <div class="relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-900 bg-clip-border text-gray-700 dark:text-gray-400 shadow-md hover:shadow-lg transition"
         style="height: 100%;">
         {{#if feature_image}}
         <a href="{{url}}" class="block w-full overflow-hidden">
@@ -36,7 +36,7 @@
         </div>
 
         <hr class="mt-1 mb-0 dark:border-gray-700">
-        <div class="flex items-center justify-between p-6">
+        <div class="flex items-center justify-between p-3">
             {{#if authors}}
             <div class="flex items-center -space-x-3">
                 <a href="{{primary_author.url}}" title="{{primary_author.name}}" class="block">
@@ -55,6 +55,11 @@
                 datetime="{{date format='YYYY-MM-DD'}}">
                 {{date format="MMMM DD, YYYY"}}
             </time>
+            <div class="flex items-center">
+                <a href="{{url}}">
+                <span class="hover:animate-ping">{{> "icons/arrow-up-right"}}</span>
+                </a>
+            </div>
         </div>
     </div>
     {{/foreach}}
