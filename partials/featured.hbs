@@ -1,8 +1,8 @@
 {{#post}}
   <div class="featured mx-auto max-w-7xl gap-8 justify-between flex flex-wrap">
     <article
-      class="max-w-[512px] flex-grow flex-shrink basis-[280px] p-6 border-2 border-gray-200 dark:border-gray-800 flex flex-wrap rounded-lg"
-    >
+  class="featured-card max-w-[512px] flex-grow flex-shrink basis-[280px] p-6 border-slate-200 dark:border-slate-800 flex flex-wrap rounded-lg border shadow-sm">
+
       <div class="mr-4 w-24 leading-6 rounded-lg">
         {{#get "posts" filter="primary_tag:{{primary_tag.slug}}" limit="1"}}
           {{#foreach posts}}
@@ -27,7 +27,7 @@
       </div>
     </article>
     <article
-      class="max-w-[512px] flex-grow flex-shrink basis-[280px] p-6 border-2 border-gray-200 dark:border-gray-800 flex flex-wrap rounded-lg reverse-me"
+      class="max-w-[512px] flex-grow flex-shrink basis-[280px] p-6 border-slate-200 dark:border-slate-800 flex flex-wrap rounded-lg reverse-me  border shadow-sm"
     >
       <div class="mr-4 w-24 leading-6 rounded-lg">
         {{#get
