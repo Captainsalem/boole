@@ -3,12 +3,12 @@
     <div class="flex gap-8 items-center">
         <!-- Dynamic injection of site logo or title -->
       {{#if @site.logo}}
-      <a href="{{@site.url}}"><img src="{{@site.logo}}" alt="Blog Logo" class="invert dark:invert-0" /></a>
+      <a href="{{@site.url}}"><img src="{{@site.logo}}" width="48px" height="48px" alt="{{@site.title}}" class="invert dark:invert-0" /></a>
     {{else}}
       <div class="text-4xl font-serif">{{@site.title}}</div>
     {{/if}}
         <!--navigation placeholder navigation -->
-        <nav>
+        <nav class="text-sm">
           {{navigation}}
         </nav>
     </div>
@@ -34,8 +34,8 @@
 
 
 
-        <p class="hidden xl:block dark:text-white"><a href="/signin">Sign in</a></p>
-        <button type="button" class="py-2 px-6 btn-gradient hidden xl:block">Become member</button>
+        <p class="text-sm hidden xl:block dark:text-white"><a href="/signin">Sign in</a></p>
+        <button type="button" class="py-2 px-6 btn-gradient hidden xl:block text-sm">Become member</button>
     </div>
 </div>
 
