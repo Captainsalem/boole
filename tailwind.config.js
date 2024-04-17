@@ -35,14 +35,18 @@ module.exports = {
         },
         aspectRatio: {
           '4/3': '4 / 3',
+          '5/4': '5 / 4',
         },
         zIndex: {
           '2': '2',
-        }
+        },
+        rotate: {
+          '-220': '-220deg',
+        },
       },
     },
   },
   plugins: [
-    require('flowbite-typography'),
+    require('@tailwindcss/typography'),
   ],
 };

@@ -1,42 +1,48 @@
 <html lang="{{@site.locale}}">
-  <head>
 
-    {{! Document Settings }}
-    <meta charset=" utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-{{! Base Meta }}
-<title>{{meta_title}}</title>
-<meta name="HandheldFriendly" content="True" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-{{! Built stylesheet }}
-<link rel="stylesheet" type="text/css" href="{{asset 'build/styles.css'}}" />
-{{!-- prism js css file --}}
-<link rel="stylesheet" type="text/css" href="{{asset 'css/prism-shades-of-purple.css'}}" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<head>
+  {{! Document Settings }}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  {{! Base Meta }}
+  <title>{{meta_title}}</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{! Built stylesheet }}
+  <link rel="stylesheet" type="text/css" href="{{asset 'build/styles.css'}}" />
+  {{!-- prism js css file --}}
+  <link rel="stylesheet" type="text/css" href="{{asset 'css/prism-theme.css'}}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
 
-{{! This tag outputs SEO meta+structured data and other important settings }}
-{{ghost_head}}
-{{!-- This tag outputs scripts as saved in "code injection" scripts. --}}
-{{ghost_foot}}
 
-
+  {{! This tag outputs SEO meta+structured data and other important settings }}
+  {{ghost_head}}
+  {{!-- This tag outputs scripts as saved in "code injection" scripts. --}}
+  {{ghost_foot}}
 </head>
 
-<body
-  class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-200 transition-colors duration-500 max-w-[1400px] mx-auto text-lg">
-{{> navbar}}
-{{> blur }}
-{{{body}}}
-{{> footer}}
+<body class="text-gray-900 dark:text-gray-200 transition-colors duration-500 max-w-[1400px] mx-auto text-lg">
+  <!-- Light Mode Background -->
+ <div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+  <div class="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-fuchsia-400 opacity-20 blur-[100px]">
+  </div>
+  </div>
 
-{{!-- prims.js script file --}}
-<script src="{{asset 'js/prism.js'}}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <!-- Dark Mode Background -->
+  <div class="dark:fixed dark:inset-0 dark:bg-slate-950 dark:z-[-1]">
+    <div class="dark:absolute dark:inset-0 dark:bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)]">
+    </div>
+  </div>
 
+  {{> navbar}}
+  {{{body}}}
+  {{> footer}}
+  {{!-- prims.js script file --}}
+  <script src="{{asset 'js/prism.js'}}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
+
 </html>

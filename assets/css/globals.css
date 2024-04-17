@@ -21,7 +21,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .single-post h5,
 .single-post h6,
 .single-post p {
-  font-family: inherit;  /* Ensures headings and paragraphs use the same font */
+  font-family: inherit;
+}
+.single-post p {
+  font-size: 14px
 }
 
 h1, .h1 {
@@ -45,7 +48,7 @@ h6, .h6 {
 p ol {
   font-family: 'Inter';
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 hr, blockquote, .kg-card.kg-header-card {
   margin-top: 4rem;
