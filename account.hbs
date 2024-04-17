@@ -1,0 +1,12 @@
+{{!< default}}
+{{#if @member.paid}}
+{{#foreach @member.subscriptions}}
+    {{> members/member-subscription}}
+{{/foreach}}
+
+{{else if @member}}
+    {{> members/member-free}}
+
+{{else}}
+    <script>window.location = '{{@site.url}}/signin/';</script>
+{{/if}}

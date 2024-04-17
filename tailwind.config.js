@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["*.hbs", "partials/*.hbs"],
+  content: ["*.hbs", "partials/*.hbs", "partials/members/*.hbs"],
   darkMode: "class",
   theme: {
     extend: {
