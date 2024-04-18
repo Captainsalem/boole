@@ -1525,6 +1525,10 @@ video {
   height: 100vh;
 }
 
+.h-1 {
+  height: 0.25rem;
+}
+
 .max-h-6 {
   max-height: 1.5rem;
 }
@@ -1591,6 +1595,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-1 {
+  width: 0.25rem;
 }
 
 .min-w-96 {
@@ -2028,6 +2036,11 @@ video {
   border-color: rgb(30 41 59 / var(--tw-border-opacity));
 }
 
+.border-slate-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(203 213 225 / var(--tw-border-opacity));
+}
+
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -2385,6 +2398,10 @@ video {
   padding-top: 0.5rem;
 }
 
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2620,6 +2637,11 @@ video {
 .text-slate-700 {
   --tw-text-opacity: 1;
   color: rgb(51 65 85 / var(--tw-text-opacity));
+}
+
+.text-slate-500 {
+  --tw-text-opacity: 1;
+  color: rgb(100 116 139 / var(--tw-text-opacity));
 }
 
 .no-underline {
@@ -3012,6 +3034,11 @@ hr, blockquote, .kg-card.kg-header-card {
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-slate-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-gradient-to-bl:hover {
   background-image: linear-gradient(to bottom left, var(--tw-gradient-stops));
 }
@@ -3049,6 +3076,11 @@ hr, blockquote, .kg-card.kg-header-card {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:text-slate-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(51 65 85 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
@@ -3218,6 +3250,31 @@ hr, blockquote, .kg-card.kg-header-card {
   background-color: transparent;
 }
 
+.dark\:bg-slate-800:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+}
+
+.dark\:bg-transparent\/30:is(.dark *) {
+  background-color: rgb(0 0 0 / 0.3);
+}
+
+.dark\:bg-transparent\/50:is(.dark *) {
+  background-color: rgb(0 0 0 / 0.5);
+}
+
+.dark\:bg-transparent\/80:is(.dark *) {
+  background-color: rgb(0 0 0 / 0.8);
+}
+
+.dark\:bg-slate-900\/30:is(.dark *) {
+  background-color: rgb(15 23 42 / 0.3);
+}
+
+.dark\:bg-slate-900\/50:is(.dark *) {
+  background-color: rgb(15 23 42 / 0.5);
+}
+
 .dark\:bg-\[radial-gradient\(circle_500px_at_50\%_200px\2c \#3e3e3e\2c transparent\)\]:is(.dark *) {
   background-image: radial-gradient(circle 500px at 50% 200px,#3e3e3e,transparent);
 }
@@ -3344,9 +3401,38 @@ hr, blockquote, .kg-card.kg-header-card {
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
+.dark\:hover\:bg-slate-700:hover:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+}
+
+.hover\:dark\:bg-transparent:is(.dark *):hover {
+  background-color: transparent;
+}
+
+.hover\:dark\:bg-slate-800:is(.dark *):hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+}
+
+.hover\:dark\:bg-slate-700:is(.dark *):hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+}
+
 .dark\:hover\:text-white:hover:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dark\:hover\:text-slate-700:hover:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(51 65 85 / var(--tw-text-opacity));
+}
+
+.dark\:hover\:text-slate-300:hover:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
 .dark\:focus\:ring-blue-800:focus:is(.dark *) {
