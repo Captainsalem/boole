@@ -1,0 +1,36 @@
+<div class="flex flex-wrap -mr-4 -ml-4">
+  {{!-- Fetch top 4 featured articles --}}
+  {{#get "posts" filter="featured:true" limit="4" as |featured_posts|}}
+    {{!-- Iterate through each featured article --}}
+    {{#foreach featured_posts}}
+      <div class="flex-grow-0 flex-shrink-0 basis-2/4 max-w-[50%]">
+        <div class="flex flex-wrap gap-8">
+          <article class="rotate--220 gap-4 relative p-4 flex-start rounded-lg h-full w-full flex flex-wrap">
+              <a href="{{url}}" class=" z-[2] relative block w-full">
+                  <img src="{{feature_image}}" alt="{{title}}" class="aspect-[5/4] object-cover w-full h-full rounded-lg max-w-full block border-0 ">
+              </a>
+              <div class="flex-grow flex-shrink basis-[120px] z-[2] relative">
+                  <div class="tag-list flex flex-wrap">
+                      <button type="button"
+                          class="flex items-center justify-center gap-2 text-white text-xs bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg px-3 py-1.5 text-center me-2 mb-2">
+                          {{#if featured}}
+                          <span class="w-4 h-4 inline-flex items-center justify-center">
+                              {{> "icons/fire"}}
+                          </span>
+                          {{/if}}
+                          <a href="{{primary_tag.url}}" class="inline-block">
+                              {{primary_tag.name}}
+                          </a>
+                      </button>
+                  </div>
+                  <h2 class="h4 text-lg font-medium leading-4">
+                      <a href="{{url}}">{{title}}</a>
+                  </h2>
+              </div>
+          </article>
+        </div>
+      </div>
+    {{/foreach}}
+  {{/get}}
+</div>
+
