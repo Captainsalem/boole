@@ -1,7 +1,73 @@
-<div class=" columns-2 block mb-24">
-  <div class="container max-w-7xl w-full pr-4 pl-4 mr-auto ml-auto">
-    <div class="">
-      <h2 class=" text-center mb-8"></h2>
+<div class="grid grid-cols-12 gap-4">
+  <div class="col-span-7 row-span-6">
+    <div class="w-full pr-4 pl-4">
+      {{#get "posts" limit="1" include="tags,authors"}}
+      {{#foreach posts}}
+      <article class=" bg-transparent border-2 border-dotted border-slate-800 p-6 gap-x-6 rounded-lg h-full, w-full flex flex-wrap">
+        <a href="{{url}}" class="z-[2] relative block w-full bg-transparent">
+          <img src="{{feature_image}}" alt="{{name}}"
+            class=" aspect-video object-cover w-full h-full rounded-lg max-w-full block border-none">
+        </a>
+        <div class="z-[2] relative">
+          <div class="flex flex-wrap mt-4">
+            {{#primary_tag}}
+            <a href="{{url}}"
+              class="index-tag text-sm dark:text-slate-400 inline-flex relative z-[1] pr-4 pl-4 leading-6 h-7 border-2 border-dotted border-slate-800 rounded-xl bg-transparent transition-all" {{#if accent_color}}style="--color-accent: {{accent_color}}; border-color: var(--color-accent);"{{/if}}>{{name}}</a>
+            {{/primary_tag}}
+          </div>
+          <h2 class="text-2xl dark:text-slate-400 font-bold leading-5 mt-4">
+            <a href="{{url}}">{{title}}</a>
+          </h2>
+          <div class="text-sm dark:text-slate-400 mb-6 h-auto overflow-hidden leading-6">
+            {{excerpt}}
+          </div>
+          <div class="flex flex-wrap">
+            <div class=" mr-6 flex flex-wrap ">
+              {{#if authors}}
+              {{#foreach authors}}
+              <a href="{{url}}" class="z-[9] block w-10 h-10 rounded-full -mr-3 p-1">
+                <img src="{{profile_image}}" alt="{{name}}" class="rounded-full">
+              </a>
+              {{/foreach}}
+              {{/if}}
+            </div>
+            <span class="inline-flex items-center leading-6">
+              {{> "icons/clock"}}
+              <span class="ml-1 dark:text-slate-400 text-xs">{{reading_time}}</span>
+            </span>
+          </div>
+        </div>
+      </article>
+      {{/foreach}}
+      {{/get}}
+    </div>
+  </div>
+
+  <div class="col-span-5 row-span-2">
+    <div class="flex flex-wrap gap-1">
+      {{#get "posts" filter="featured:true" limit="4" order="published_at desc" as |featuredPosts|}}
+      {{#foreach featuredPosts}}
+      <article
+        class="gap-x-4 bg-transparent border-2 border-dotted border-slate-800 relative p-6 self-start gap-y-6 rounded-lg h-full w-full flex flex-wrap mt-2">
+        <a href="{{url}}" class="flex-grow-0 flex-shrink-0 basis-1/3 self-start z-[2] relative block w-full">
+          <img src="{{feature_image}}" alt="{{title}}"
+            class="aspect-[5/4] object-cover w-full h-full rounded-lg max-w-full block border-0">
+        </a>
+        <div class="flex-grow flex-shrink basis-32 z-[2] relative">
+          <div class="flex flex-wrap">
+            <a href="{{primary_tag.url}}"
+              class="text-sm inlinex-flex relative z-[1] px-4 leading-6 h-6 rounded-xl bg-transparent transition-all">{{primary_tag}}</a>
+          </div>
+          <h2 class="text-xl mb-0 font-bold leading-5">
+            <a href="{{url}}"
+              class="bg-gradient-to-tr dark:text-slate-400 transition-colors">{{title}}</a>
+          </h2>
+          <div class="dark:text-slate-400 mt-10 text-sm">{{excerpt}}</div>
+        </div>
+      </article>
+      {{/foreach}}
+      {{/get}}
     </div>
   </div>
 </div>
+
