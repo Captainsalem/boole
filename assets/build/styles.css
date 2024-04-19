@@ -1106,6 +1106,10 @@ video {
   pointer-events: none;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -1180,12 +1184,8 @@ video {
   z-index: 9;
 }
 
-.col-span-1 {
-  grid-column: span 1 / span 1;
-}
-
-.col-span-4 {
-  grid-column: span 4 / span 4;
+.z-\[-1\] {
+  z-index: -1;
 }
 
 .col-span-5 {
@@ -1196,36 +1196,12 @@ video {
   grid-column: span 7 / span 7;
 }
 
-.col-start-2 {
-  grid-column-start: 2;
-}
-
-.row-span-4 {
-  grid-row: span 4 / span 4;
-}
-
-.row-span-5 {
-  grid-row: span 5 / span 5;
-}
-
 .row-span-2 {
   grid-row: span 2 / span 2;
 }
 
 .row-span-6 {
   grid-row: span 6 / span 6;
-}
-
-.row-start-2 {
-  grid-row-start: 2;
-}
-
-.row-start-3 {
-  grid-row-start: 3;
-}
-
-.row-start-4 {
-  grid-row-start: 4;
 }
 
 .-m-4 {
@@ -1347,6 +1323,10 @@ video {
   margin-left: 0px;
 }
 
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -1455,8 +1435,8 @@ video {
   margin-top: 2rem;
 }
 
-.ml-1 {
-  margin-left: 0.25rem;
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .block {
@@ -1807,16 +1787,8 @@ video {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-cols-5 {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
 .grid-cols-12 {
   grid-template-columns: repeat(12, minmax(0, 1fr));
-}
-
-.grid-rows-5 {
-  grid-template-rows: repeat(5, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -2104,6 +2076,11 @@ video {
   border-color: rgb(51 65 85 / var(--tw-border-opacity));
 }
 
+.border-slate-800 {
+  --tw-border-opacity: 1;
+  border-color: rgb(30 41 59 / var(--tw-border-opacity));
+}
+
 .border-transparent {
   border-color: transparent;
 }
@@ -2111,16 +2088,6 @@ video {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.border-slate-900 {
-  --tw-border-opacity: 1;
-  border-color: rgb(15 23 42 / var(--tw-border-opacity));
-}
-
-.border-slate-800 {
-  --tw-border-opacity: 1;
-  border-color: rgb(30 41 59 / var(--tw-border-opacity));
 }
 
 .bg-black {
@@ -2163,11 +2130,6 @@ video {
   background-color: rgb(212 213 227 / var(--tw-bg-opacity));
 }
 
-.bg-slate-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
-}
-
 .bg-slate-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(2 6 23 / var(--tw-bg-opacity));
@@ -2202,6 +2164,10 @@ video {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
 }
 
+.bg-\[radial-gradient\(circle_500px_at_50\%_200px\2c \#fff5e7\2c transparent\)\] {
+  background-image: radial-gradient(circle 500px at 50% 200px,#fff5e7,transparent);
+}
+
 .from-purple-500 {
   --tw-gradient-from: #a855f7 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(168 85 247 / 0) var(--tw-gradient-to-position);
@@ -2218,11 +2184,6 @@ video {
   --tw-gradient-from: #dc2626 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(220 38 38 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.via-blue-400 {
-  --tw-gradient-to: rgb(96 165 250 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #60a5fa var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
 .via-violet-600 {
@@ -2242,10 +2203,6 @@ video {
   --tw-gradient-to: #a855f7 var(--tw-gradient-to-position);
 }
 
-.bg-\[length\:2px\] {
-  background-size: 2px;
-}
-
 .bg-\[size\:14px_24px\] {
   background-size: 14px 24px;
 }
@@ -2257,10 +2214,6 @@ video {
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
-}
-
-.bg-no-repeat {
-  background-repeat: no-repeat;
 }
 
 .object-cover {
@@ -2448,6 +2401,10 @@ video {
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 
 .text-left {
@@ -3298,11 +3255,6 @@ hr, blockquote, .kg-card.kg-header-card {
   background-image: radial-gradient(circle 500px at 50% 200px,#3e3e3e,transparent);
 }
 
-.dark\:text-xs:is(.dark *) {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .dark\:text-blue-500:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
@@ -3370,11 +3322,6 @@ hr, blockquote, .kg-card.kg-header-card {
 .dark\:text-white:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.dark\:text-slate-900:is(.dark *) {
-  --tw-text-opacity: 1;
-  color: rgb(15 23 42 / var(--tw-text-opacity));
 }
 
 .dark\:placeholder-slate-500:is(.dark *)::-moz-placeholder {
