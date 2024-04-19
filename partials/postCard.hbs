@@ -1,7 +1,7 @@
 <div class="mx-auto my-20 grid justify-center gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
     {{#get "posts" limit="9" include="tags,authors"}}
     {{#foreach posts}}
-    <div class="relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white dark:bg-transparent border-2 border-dotted dark:border-slate-700 bg-clip-border text-gray-700 dark:text-gray-400 shadow-md hover:shadow-lg transition"
+    <div class="relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white dark:bg-transparent border border-dotted dark:border-slate-700 bg-clip-border text-gray-700 dark:text-gray-400 shadow-md hover:shadow-lg transition"
         style="height: 100%;">
         {{#if feature_image}}
         <a href="{{url}}" class="block w-full overflow-hidden border-b border-dotted border-slate-700 z-0 rounded-t-lg transition-all duration-300 hover:scale-110">
@@ -15,7 +15,7 @@
                 <div class="flex flex-wrap mt-4">
             {{#primary_tag}}
             <a href="{{url}}"
-              class="index-tag text-sm dark:text-slate-400 inline-flex relative z-[1] pr-4 pl-4 leading-6 h-7 border-2 border-dotted border-slate-800 rounded-xl bg-transparent transition-all" {{#if accent_color}}style="--color-accent: {{accent_color}}; border-color: var(--color-accent);"{{/if}}>{{name}}</a>
+              class="index-tag text-sm dark:text-slate-400 inline-flex relative z-[1] pr-4 pl-4 leading-6 h-7 border border-dotted border-slate-800 rounded-xl bg-transparent transition-all" {{#if accent_color}}style="--color-accent: {{accent_color}}; border-color: var(--color-accent);"{{/if}}>{{name}}</a>
               {{#if featured}}
                             <svg  xmlns="http://www.w3.org/2000/svg"  width="16px"  height="16px"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-feather"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 20l10 -10m0 -5v5h5m-9 -1v5h5m-9 -1v5h5m-5 -5l4 -4l4 -4" /><path d="M19 10c.638 -.636 1 -1.515 1 -2.486a3.515 3.515 0 0 0 -3.517 -3.514c-.97 0 -1.847 .367 -2.483 1m-3 13l4 -4l4 -4" /></svg>
                             {{/if}}
@@ -40,7 +40,7 @@
             <div class="flex items-center -space-x-3">
                 <a href="{{primary_author.url}}" title="{{primary_author.name}}" class="block">
                     <img src="{{img_url primary_author.profile_image}}" alt="avatar"
-                        class="relative inline-block h-9 w-9 !rounded-full border-2 border-white object-cover object-center hover:z-10">
+                        class="relative inline-block h-9 w-9 !rounded-full border border-white object-cover object-center hover:z-10">
                 </a>
             </div>
             {{/if}}
