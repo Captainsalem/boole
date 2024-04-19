@@ -1106,6 +1106,10 @@ video {
   pointer-events: none;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -1164,6 +1168,18 @@ video {
   bottom: 1.25rem;
 }
 
+.left-\[-20\%\] {
+  left: -20%;
+}
+
+.right-\[-20\%\] {
+  right: -20%;
+}
+
+.top-\[-10\%\] {
+  top: -10%;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -1182,6 +1198,10 @@ video {
 
 .z-30 {
   z-index: 30;
+}
+
+.z-\[-1\] {
+  z-index: -1;
 }
 
 .-m-4 {
@@ -1561,6 +1581,10 @@ video {
   height: 14rem;
 }
 
+.h-\[500px\] {
+  height: 500px;
+}
+
 .max-h-6 {
   max-height: 1.5rem;
 }
@@ -1639,6 +1663,10 @@ video {
 
 .w-3 {
   width: 0.75rem;
+}
+
+.w-\[500px\] {
+  width: 500px;
 }
 
 .min-w-96 {
@@ -2157,6 +2185,34 @@ video {
 
 .bg-gradient-to-tr {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+}
+
+.bg-\[radial-gradient\(circle_farthest-side\2c rgba\(255\2c 0\2c 182\2c \.15\)\2c rgba\(255\2c 255\2c 255\2c 0\)\)\] {
+  background-image: radial-gradient(circle farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0));
+}
+
+.bg-\[radial-gradient\(circle_500px_at_50\%_200px\2c \#FFD700\2c transparent\)\] {
+  background-image: radial-gradient(circle 500px at 50% 200px,#FFD700,transparent);
+}
+
+.bg-\[radial-gradient\(circle_500px_at_50\%_200px\2c \#ff9700\2c transparent\)\] {
+  background-image: radial-gradient(circle 500px at 50% 200px,#ff9700,transparent);
+}
+
+.bg-\[radial-gradient\(circle_500px_at_50\%_200px\2c \#ffb64d\2c transparent\)\] {
+  background-image: radial-gradient(circle 500px at 50% 200px,#ffb64d,transparent);
+}
+
+.bg-\[radial-gradient\(circle_500px_at_50\%_200px\2c \#ffd59a\2c transparent\)\] {
+  background-image: radial-gradient(circle 500px at 50% 200px,#ffd59a,transparent);
+}
+
+.bg-\[radial-gradient\(circle_500px_at_50\%_200px\2c \#ffd59afff5e7\2c transparent\)\] {
+  background-image: radial-gradient(circle 500px at 50% 200px,#ffd59afff5e7,transparent);
+}
+
+.bg-\[radial-gradient\(circle_500px_at_50\%_200px\2c \#fff5e7\2c transparent\)\] {
+  background-image: radial-gradient(circle 500px at 50% 200px,#fff5e7,transparent);
 }
 
 .from-purple-500 {
@@ -3284,6 +3340,18 @@ hr, blockquote, .kg-card.kg-header-card {
 
 .dark\:bg-\[radial-gradient\(circle_500px_at_50\%_200px\2c \#3e3e3e\2c transparent\)\]:is(.dark *) {
   background-image: radial-gradient(circle 500px at 50% 200px,#3e3e3e,transparent);
+}
+
+.dark\:bg-\[radial-gradient\(circle_500px_at_50\%_200px\2c \#ffd59a\2c transparent\)\]:is(.dark *) {
+  background-image: radial-gradient(circle 500px at 50% 200px,#ffd59a,transparent);
+}
+
+.dark\:bg-\[radial-gradient\(circle_500px_at_50\%_200px\2c \#\2c transparent\)\]:is(.dark *) {
+  background-image: radial-gradient(circle 500px at 50% 200px,#,transparent);
+}
+
+.dark\:bg-\[radial-gradient\(circle_500px_at_50\%_200px\2c \#fff5e7\2c transparent\)\]:is(.dark *) {
+  background-image: radial-gradient(circle 500px at 50% 200px,#fff5e7,transparent);
 }
 
 .dark\:text-blue-500:is(.dark *) {
