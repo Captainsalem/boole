@@ -39,7 +39,7 @@ as |tiers|
     <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:items-center">
         {{#foreach tiers}}
         <!-- Card -->
-        <div class="flex flex-col rounded-xl border border-gray-200 p-8 text-center dark:border-gray-700">
+        <div class="flex flex-col rounded-xl border border-dotted border-gray-200 p-8 text-center dark:border-gray-700">
             <h4 class="text-lg font-medium text-gray-800 dark:text-gray-200">{{name}}</h4>
 
             {{#match type "free"}}
@@ -85,7 +85,7 @@ as |tiers|
 
             {{#match type "free"}}
             <a href="/signup"
-                class="mt-5 inline-flex items-center justify-center gap-x-2 rounded-lg border border-transparent bg-gradient-to-br from-purple-600 to-blue-500 px-4 py-3 text-sm font-semibold hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300 disabled:pointer-events-none disabled:opacity-50 dark:focus:ring-blue-800"
+                class="mt-5 inline-flex items-center justify-center gap-x-2 rounded-lg border  dark:border-dotted border-transparent bg-gradient-to-br from-purple-600 to-blue-500 px-4 py-3 text-sm font-semibold hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300 disabled:pointer-events-none disabled:opacity-50 dark:focus:ring-blue-800"
                 href="#">
                 Subscribe For Free
             </a>

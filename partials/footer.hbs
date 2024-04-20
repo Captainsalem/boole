@@ -69,3 +69,62 @@
         </div>
     </div>
 </footer>
+
+
+
+<footer class="bg-slate-950 font-[sans-serif] w-full max-w-full">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div>
+      <h2 class="text-white text-lg font-bold mb-4">Resources</h2>
+      <ul class="space-y-3 text-gray-400 hover:text-white transition-all">
+        {{#foreach navigation}}
+        <li>
+          <a href="{{url}}" class="hover:underline">{{label}}</a>
+        </li>
+        {{/foreach}}
+      </ul>
+    </div>
+    <div>
+      <h2 class="text-white text-lg font-bold mb-4">Ghost Navigation</h2>
+      <ul class="space-y-3 text-gray-400 hover:text-white transition-all">
+        {{#foreach @site.secondary_navigation}}
+        <li>
+          <a href="{{url}}" class="hover:underline">{{label}}</a>
+        </li>
+        {{/foreach}}
+      </ul>
+    </div>
+    <div>
+      <h2 class="text-white text-lg font-bold mb-4">Tags</h2>
+      <ul class="space-y-3 text-gray-400 hover:text-white transition-all">
+        {{#foreach tags limit="4"}}
+        <li>
+          <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}}</a>
+        </li>
+        {{/foreach}}
+      </ul>
+    </div>
+    <div class="flex items-center lg:justify-center">
+      <a href="{{@site.url}}">
+        <img src="{{img_url @site.logo size="s"}}" alt="{{@site.title}}" class='w-60' />
+      </a>
+    </div>
+  </div>
+  <hr class="my-8 border-gray-700 w-full w-max-full" />
+  <div class="sm:flex sm:items-center sm:justify-between sm:flex-row">
+    <p class='text-gray-400 text-sm sm:order-1'>© {{date format="YYYY"}} <a href='{{@site.url}}' target='_blank'
+      class="hover:underline mx-1">{{@site.title}}</a> All Rights Reserved.
+    </p>
+    <div class="flex space-x-5 max-sm:mt-4">
+      <!-- Dynamic social media links -->
+      <a href="{{@site.facebook}}" class="text-gray-400 hover:text-white text-base transition-all">
+        <!-- SVG for Facebook (not included here, use actual SVG code) -->
+        <span class="sr-only">Facebook</span>
+      </a>
+      <a href="{{@site.twitter}}" class="text-gray-400 hover:text-white text-base transition-all">
+        <!-- SVG for Twitter (not included here, use actual SVG code) -->
+        <span class="sr-only">Twitter</span>
+      </a>
+    </div>
+  </div>
+</footer>
