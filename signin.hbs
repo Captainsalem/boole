@@ -1,7 +1,7 @@
 {{!< default}} {{#if @member}} <a href="javascript:" data-members-signout>Sign out</a>
   {{else}}
   <div
-    class=" mt-12 mx-auto w-full max-w-sm bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-slate-900 dark:border-slate-800">
+    class=" mt-12 mx-auto w-full max-w-sm bg-white border-2 border-gray-200 rounded-xl shadow-sm dark:bg-slate-900/50 border-dotted dark:border-slate-800">
     <div class="p-4 sm:p-7">
       <div class="mr-0 mb-10 text-center">
         <a href="{{@site.url}}" class=" display:none">
@@ -20,7 +20,7 @@
 
       <div class="mt-5">
         <button type="button"
-          class=" cursor-not-allowed w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-slate-700 dark:text-white dark:hover:bg-slate-800">
+          class=" dark:bg-slate-900/30  cursor-not-allowed w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-slate-700 dark:text-white dark:hover:bg-slate-800">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="icon icon-tabler icons-tabler-outline icon-tabler-signature">
@@ -38,10 +38,10 @@
           <div class="grid gap-y-4">
             <!-- Form Group -->
             <div>
-              <label for="email" class="block text-sm mb-2 dark:text-white">Email address</label>
+              <label for="email" class="block  text-sm mb-2 dark:text-white">Email address</label>
               <div class="relative">
                 <input data-members-email type="email" id="email" name="email"
-                  class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-purple-500 focus:ring-purple-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-slate-700 dark:text-slate-400 dark:placeholder-slate-500 dark:focus:ring-slate-600"
+                  class="py-3 px-4 block w-full border dark:bg-slate-900/50  border-gray-200 rounded-lg text-sm focus:border-purple-500 focus:ring-purple-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-slate-700 dark:text-slate-400 dark:placeholder-slate-500 dark:focus:ring-slate-600"
                   required aria-describedby="email-error">
                 <div class="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
                   <svg class="size-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"

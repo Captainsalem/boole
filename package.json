@@ -35,7 +35,12 @@
   "config": {
     "posts_per_page": 9,
     "card_assets": true,
-    "custom": {}
+    "custom": {
+      "use_portal_links": {
+        "type": "boolean",
+        "default": false
+      }
+    }
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.12",

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["*.hbs", "partials/*.hbs"],
+  content: ["*.hbs", "partials/*.hbs", "partials/members/*.hbs"],
   darkMode: "class",
   theme: {
     extend: {
@@ -39,9 +39,19 @@ module.exports = {
         },
         zIndex: {
           '2': '2',
+          '1': '1',
+          '9': '9'
         },
         rotate: {
           '-220': '-220deg',
+          '-155': '-155deg',
+          '-147': '-147deg'
+        },
+        backgroundSize: {
+          '2': '2px',
+        },
+        maxWidth: {
+          '41': '41%',
         },
       },
     },
