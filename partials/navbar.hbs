@@ -37,7 +37,9 @@
       {{#if @member.paid}}
       {{else if @member}}
         <p class="text-sm hidden xl:block dark:text-white"><a href="javascript:" data-members-signout>Sign Out</a></p>
-        <p class="text-sm hidden xl:block dark:text-white"><a href="/account/"{{#if @custom.use_portal_links}} data-portal="account"{{/if}}</a>{{> "icons/user"}} Account</p>
+        <div class="text-sm hidden xl:block dark:text-white">
+          <a href="/account/"{{#if @custom.use_portal_links}} data-portal="account"{{/if}}>{{> "icons/user"}}</a>
+        </div>
       {{else}}
         <p class="text-sm hidden xl:block dark:text-white"><a href="/signin">Sign in</a></p>
         <button type="button" class="py-2 px-6 btn-gradient hidden xl:block text-sm">Become member</button>
