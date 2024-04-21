@@ -57,7 +57,7 @@ as |tiers|
                 yearly_price currency=currency}}
                 <span class="text-xs">{{t "/year"}}</span>
             </span>
-            <div class="flex flex-col items-center pt-2 pb-2 ">
+            <div class="flex flex-col items-center pt-2 pb-2">
                 <span data-discount data-plan="annual" data-monthly-price="{{price monthly_price}}"
                     data-yearly-price="{{price yearly_price}}"
                     class="discount mt-3 inline-block whitespace-nowrap rounded-lg bg-gradient-to-bl from-purple-500 via-violet-600 to-blue-600 px-2.5 py-1 text-[11px] font-semibold uppercase leading-5 tracking-wide text-white"
@@ -85,7 +85,7 @@ as |tiers|
 
             {{#match type "free"}}
             <a href="/signup"
-                class="mt-5 inline-flex items-center justify-center gap-x-2 rounded-lg border  dark:border-dotted border-transparent bg-gradient-to-br from-purple-600 to-blue-500 px-4 py-3 text-sm font-semibold hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300 disabled:pointer-events-none disabled:opacity-50 dark:focus:ring-blue-800"
+                class="mt-5 inline-flex items-center justify-center gap-x-2 rounded-lg border dark:border-dotted border-transparent bg-gradient-to-br from-purple-600 to-blue-500 px-4 py-3 text-sm font-semibold hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300 disabled:pointer-events-none disabled:opacity-50 dark:focus:ring-blue-800"
                 href="#">
                 Subscribe For Free
             </a>
@@ -143,11 +143,11 @@ as |tiers|
   ${monthly}, Yearly: ${yearly}`); const discount = Math.round(100 - (yearly /
                                 (12 * monthly) * 100)); console.log(`Discount: ${discount}%`); if (discount >
                                     0 && discount < 100) {
-                        plan.textContent = `${discount}% off`;
+                                        plan.textContent = `${discount}% off`;
                         plan.setAttribute('data-discount', `${discount}%`);
                     } else {
                         plan.textContent
-                            = "No discount";
+                        = "No discount";
                     }
                 });
             }; const onDataPlanSwitch = () => {
@@ -160,13 +160,14 @@ as |tiers|
                                     element.style.display = 'block';
                                 } else if (!isChecked &&
                                     element.getAttribute('data-plan') === 'monthly') {
-                                    element.style.display =
+                                        element.style.display =
                                         'block';
                                 } else { element.style.display = 'none'; }
                             });
             };
         document.querySelector('.js-plan-toggle').addEventListener('change',
             onDataPlanSwitch); onDataPlanSwitch(); // Set initial display based on toggle
-        calculateDiscounts(); // Calculate discounts right after the DOM is fully loaded
+        calculateDiscounts(); // Calculate discounts right after the DOM is fully
+        loaded
     });
 </script>
