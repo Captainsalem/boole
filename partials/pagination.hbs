@@ -3,21 +3,21 @@
         <ul class="inline-flex -space-x-px text-sm justify-center">
             <li>
                 <a href="{{#if prev}}{{page_url prev}}{{else}}javascript:void(0);{{/if}}"
-                    class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-slate-700 hover:dark:bg-slate-800 border border-e-0 border-dotted border-slate-300 rounded-s-lg hover:bg-slate-100 hover:text-slate-700  dark:border-slate-700 dark:text-slate-400  dark:hover:text-slate-300{{#unless prev}} disabled{{/unless}}">
+                    class="flex card-excerpt items-center justify-center px-3 h-8 ms-0 leading-tight text-slate-700 hover:dark:bg-slate-800 border border-e-0 border-dotted border-slate-300 rounded-s-lg hover:bg-slate-100 hover:text-slate-700  dark:border-slate-700 dark:text-slate-400  dark:hover:text-slate-300{{#unless prev}} disabled{{/unless}}">
                     Previous
                 </a>
             </li>
             {{#foreach pages}}
             <li>
                 <a href="{{page_url}}"
-                    class="page-number flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white{{#if current}} text-blue-600 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:bg-gray-700 dark:text-white{{/if}}">
+                    class="page-number card-excerpt flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white{{#if current}} text-blue-600 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:bg-gray-700 dark:text-white{{/if}}">
                     {{page}}
                 </a>
             </li>
             {{/foreach}}
             <li>
                 <a href="{{#if next}}{{page_url next}}{{else}}javascript:void(0);{{/if}}"
-                    class="flex items-center justify-center px-3 h-8 leading-tight text-slate-500 bg-white border border-dotted border-slate-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-transparent hover:dark:bg-slate-800 dark:border-gray-700 dark:text-gray-400  dark:hover:text-slate-300{{#unless next}} disabled{{/unless}}">
+                    class="flex items-center card-excerpt justify-center px-3 h-8 leading-tight text-slate-500 bg-white border border-dotted border-slate-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-transparent hover:dark:bg-slate-800 dark:border-gray-700 dark:text-gray-400  dark:hover:text-slate-300{{#unless next}} disabled{{/unless}}">
                     Next
                 </a>
             </li>

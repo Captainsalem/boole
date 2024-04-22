@@ -3,7 +3,7 @@
 "tiers" include="monthly_price,yearly_price,benefits" limit="all"
 as |tiers|
 }}
-<div class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+<div class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 card-excerpt">
     <!-- Title -->
     <div class="mx-auto mb-10 max-w-2xl text-center lg:mb-14">
         <h2 class="text-2xl font-bold dark:text-white md:text-4xl md:leading-tight">Membership</h2>
@@ -39,7 +39,7 @@ as |tiers|
     <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:items-center">
         {{#foreach tiers}}
         <!-- Card -->
-        <div class="flex flex-col rounded-xl border border-dotted border-gray-200 p-8 text-center dark:border-gray-700">
+        <div class="flex flex-col rounded-xl border border-dotted border-gray-200 p-8 text-center dark:border-gray-700 hover-glow card-excerpt">
             <h4 class="text-lg font-medium text-gray-800 dark:text-gray-200">{{name}}</h4>
 
             {{#match type "free"}}

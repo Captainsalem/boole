@@ -6,7 +6,7 @@
     </figure>
   </div>
 
-  <div class="text-center py-5">
+  <div class="text-center py-5 card-excerpt">
     <h1 class="text-4xl capitalize font-bold tracking-tight text-gray-900 dark:text-gray-100">{{name}}</h1>
     <div class="mt-8 flex items-center justify-center gap-x-6">
       {{#if website}}
@@ -25,7 +25,7 @@
       {{/if}}
     </div>
     <div class="inline-flex items-center justify-center w-full">
-      <hr class="w-64 h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+      <hr class="w-64 h-px my-8 bg-slate-400 border-0 dark:bg-slate-800">
       <span
         class="absolute px-3 font-medium text-gray-900 -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900">{{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
     </div>
