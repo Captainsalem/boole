@@ -49,7 +49,7 @@
     {{#get "posts" filter="featured:true" limit="4" include="tags" order="published_at desc" as |featuredPosts|}}
     {{#foreach featuredPosts}}
     <article
-      class="flex flex-col bg-transparent dark:bg-transprent border border-dotted border-slate-300 dark:border-slate-800 flex-wrap mt-2 rounded-lg p-4 hover-glow">
+      class="flex flex-col bg-transparent dark:bg-transprent border border-dotted border-slate-300 dark:border-slate-800 flex-wrap mt-2 rounded-lg p-4">
       <a href="{{url}}" class="block w-full mb-4 flex-shrink-0">
         <img src="{{feature_image}}" alt="{{title}}" class="rounded-lg object-cover w-full h-48">
       </a>
