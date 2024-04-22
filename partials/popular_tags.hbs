@@ -6,7 +6,7 @@
         {{#foreach tags}}
           <a href="{{url}}" class="flex-1 m-2 min-w-[10rem] no-underline">
             <div
-              class="p-3 dark:transparent dark:border-slate-800 rounded-lg border-2 border-dotted relative overflow-hidden items-center flex hover-glow"
+              class="p-3 dark:transparent dark:border-slate-800 rounded-lg border border-dotted relative overflow-hidden items-center flex hover-glow"
             >
               <div class="w-16 h-16 rounded-lg overflow-hidden z-[2]">
                 {{#if feature_image}}
@@ -32,7 +32,7 @@
         {{/foreach}}
         <a href="/tags" class="flex-1 m-2 min-w-[10rem] no-underline">
           <div
-            class="p-3 dark:bg-transparent dark:border-slate-800 rounded-lg border-2 border-dotted relative overflow-hidden items-center flex hover-glow justify-center"
+            class="p-3 dark:bg-transparent dark:border-slate-800 rounded-lg border border-dotted relative overflow-hidden items-center flex hover-glow justify-center"
           >
             <div class="w-16 h-16 rounded-lg overflow-hidden z-[2]">
               {{#tag}}
@@ -61,7 +61,23 @@
   </div>
 </div>
 <style>
-  .hover-glow:hover { border-color: transparent; border-image:
-  linear-gradient(to right, #e53e3e, #7f56d9) 1; box-shadow: 0 0 2px #e53e3e, 0
-  0 2px #7f56d9; transition: box-shadow 0.3s ease-in-out; }
+  .hover-flow:hover > .line {
+    transform: scale(1);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.hover-glow:hover > .line:nth-child(2), 
+.hover-glow:hover > .line:nth-child(5) {
+    transition-delay: 0.2s; /* Assuming a specific delay value since $delay1 is not provided */
+}
+
+.hover-glow:hover > .line:nth-child(3),
+.hover-glow:hover > .line:nth-child(6) {
+    transition-delay: 0.4s; /* Assuming a specific delay value since $delay2 is not provided */
+}
+
+.hover-glow:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
 </style>
