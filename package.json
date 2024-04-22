@@ -34,7 +34,7 @@
     "tailwindcss": "^3.4.3"
   },
   "config": {
-    "posts_per_page": 9,
+    "posts_per_page": 12,
     "card_assets": true,
     "custom": {
       "use_portal_links": {
