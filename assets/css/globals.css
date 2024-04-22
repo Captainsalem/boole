@@ -55,6 +55,10 @@ hr, blockquote, .kg-card.kg-header-card {
   margin-bottom: 4rem;
 }
 
+.card-excerpt {
+  font-family: "Space Grotesk", sans-serif;
+}
+
 .kg-width-wide,
 .kg-content-wide > div {
     grid-column: wide-start / wide-end;
