@@ -34,9 +34,9 @@
 
 {{#if posts}}
   <div class="mx-auto mt-2 mb-8 grid justify-center gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-    {{#each posts}}
+    {{#foreach posts}}
       {{> postCard }}
-    {{/each}}
+    {{/foreach}}
   </div>
 {{/if}}
 {{pagination}}
