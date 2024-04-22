@@ -1,7 +1,10 @@
-<h1 class=" mt-24 mb-12 text-4xl text-center font-extrabold leading-none tracking-tight text-slate-900 md:text-lg lg:text-lg dark:text-slate-300">Featured Posts</h1>
+<h1
+  class=" mt-24 mb-12 text-4xl text-center font-extrabold leading-none tracking-tight text-slate-900 md:text-lg lg:text-lg dark:text-slate-300">
+  Featured Posts</h1>
 <div class="grid grid-cols-12 gap-4 mx-auto max-w-7xl">
   <!-- start main featured section -->
-  <div class="col-span-full lg:col-span-7 hero-big p-6 rounded-lg border shadow-sm flex-col hero-big bg-transparent border-dotted border-slate-300 dark:border-slate-800">
+  <div
+    class="col-span-full lg:col-span-7 hero-big p-6 rounded-lg border shadow-sm flex-col hero-big bg-transparent border-dotted border-slate-300 dark:border-slate-800 hover-glow">
     {{#get "posts" limit="1" include="tags,authors"}}
     {{#foreach posts}}
     <article class="hero-big p-6 rounded-lg flex-col hero-big bg-transparent ">
@@ -10,28 +13,31 @@
       </a>
       <div class="flex flex-wrap mt-4">
         {{#primary_tag}}
-          <a href="{{url}}" class="index-tag text-sm inline-flex relative dark:text-slate-400 border border-dotted z-[1] pr-4 pl-4 leading-6 h-7 border-slate-800 bg-transparent dark:border-slate-800 rounded-full px-3 mb-2" {{#if accent_color}}style="--color-accent: {{accent_color}}; border-color: var(--color-accent);"{{/if}}>{{name}}</a>
+        <a href="{{url}}"
+          class="index-tag text-sm inline-flex relative dark:text-slate-400 border border-dotted z-[1] pr-4 pl-4 leading-6 h-7 border-slate-800 bg-transparent dark:border-slate-800 rounded-full px-3 mb-2"
+          {{#if accent_color}}style="--color-accent: {{accent_color}}; border-color: var(--color-accent);"
+          {{/if}}>{{name}}</a>
         {{/primary_tag}}
       </div>
       <h2 class="text-2xl font-bold mb-4 dark:text-slate-400 leading-5 mt-4"><a href="{{url}}">{{title}}</a></h2>
       <div class=" text-base flex-1 dark:text-slate-400 mb-6 h-auto overflow-hidden leading-6">
-            {{excerpt}}
+        {{excerpt}}
       </div>
       <div class="flex flex-wrap">
-            <div class="mr-6 flex flex-wrap">
-              {{#if authors}}
-              {{#foreach authors}}
-              <a href="{{url}}" class="z-[9] block w-10 h-10 rounded-full -mr-3 p-1">
-                <img src="{{profile_image}}" alt="{{name}}" class="rounded-full">
-              </a>
-              {{/foreach}}
-              {{/if}}
-            </div>
-            <span class="inline-flex items-center leading-6">
-              {{> "icons/clock"}}
-              <span class="ml-1 dark:text-slate-400 text-xs">{{reading_time}}</span>
-            </span>
-          </div>
+        <div class="mr-6 flex flex-wrap">
+          {{#if authors}}
+          {{#foreach authors}}
+          <a href="{{url}}" class="z-[9] block w-10 h-10 rounded-full -mr-3 p-1">
+            <img src="{{profile_image}}" alt="{{name}}" class="rounded-full">
+          </a>
+          {{/foreach}}
+          {{/if}}
+        </div>
+        <span class="inline-flex items-center leading-6">
+          {{> "icons/clock"}}
+          <span class="ml-1 dark:text-slate-400 text-xs">{{reading_time}}</span>
+        </span>
+      </div>
     </article>
     {{/foreach}}
     {{/get}}
@@ -42,14 +48,19 @@
   <div class="col-span-full lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
     {{#get "posts" filter="featured:true" limit="4" include="tags" order="published_at desc" as |featuredPosts|}}
     {{#foreach featuredPosts}}
-    <article class="flex flex-col bg-transparent dark:bg-transprent border border-dotted border-slate-300 dark:border-slate-800 flex-wrap mt-2 rounded-lg p-4">
+    <article
+      class="flex flex-col bg-transparent dark:bg-transprent border border-dotted border-slate-300 dark:border-slate-800 flex-wrap mt-2 rounded-lg p-4 hover-glow">
       <a href="{{url}}" class="block w-full mb-4 flex-shrink-0">
         <img src="{{feature_image}}" alt="{{title}}" class="rounded-lg object-cover w-full h-48">
       </a>
       {{#primary_tag}}
-     <a href="{{url}}" class="index-tag items-center text-xs inline-flex relative border border-dotted z-[1] px-2 py-1 dark:text-slate-100 border-slate-800 bg-transparent dark:border-slate-800 rounded-full mt-3 mb-2" {{#if accent_color}}style="--color-accent: {{accent_color}}; border-color: var(--color-accent);"{{/if}}>{{name}}</a>
+      <a href="{{url}}"
+        class="index-tag items-center text-xs inline-flex relative border border-dotted z-[1] px-2 py-1 dark:text-slate-100 border-slate-800 bg-transparent dark:border-slate-800 rounded-full mt-3 mb-2"
+        {{#if accent_color}}style="--color-accent: {{accent_color}}; border-color: var(--color-accent);"
+        {{/if}}>{{name}}</a>
       {{/primary_tag}}
-      <h2 class="text-lg leading-6 font-bold mb-4 text-gray-800 hover:text-gray-600 dark:text-slate-400 mt-4"><a href="{{url}}">{{title}}</a></h2>
+      <h2 class="text-lg leading-6 font-bold mb-4 text-gray-800 hover:text-gray-600 dark:text-slate-400 mt-4"><a
+          href="{{url}}">{{title}}</a></h2>
       <div class="dark:text-slate-400 text-xs h-auto overflow-hidden leading-5">{{excerpt}}</div>
     </article>
     {{/foreach}}
@@ -57,3 +68,26 @@
   </div>
   <!-- end secondary posts section -->
 </div>
+
+
+<style>
+  .hover-flow:hover > .line {
+    transform: scale(1);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.hover-glow:hover > .line:nth-child(2), 
+.hover-glow:hover > .line:nth-child(5) {
+    transition-delay: 0.2s; /* Assuming a specific delay value since $delay1 is not provided */
+}
+
+.hover-glow:hover > .line:nth-child(3),
+.hover-glow:hover > .line:nth-child(6) {
+    transition-delay: 0.4s; /* Assuming a specific delay value since $delay2 is not provided */
+}
+
+.hover-glow:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+</style>
