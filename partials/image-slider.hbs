@@ -1,26 +1,22 @@
-<div class="grid grid-cols-12 gap-4">
-  <!-- start section 1 -->
-  <div class="col-span-7 row-span-6">
-    <div class="w-full pr-4 pl-4">
-      {{#get "posts" limit="1" include="tags,authors"}}
-      {{#foreach posts}}
-      <article class="hero-big bg-transparent border border-dotted border-slate-300 dark:border-slate-800 p-6 gap-x-6 rounded-lg h-full w-full flex flex-wrap">
-        <a href="{{url}}" class="z-[2] relative block w-full bg-transparent">
-          <img src="{{feature_image}}" alt="{{name}}" class="aspect-video object-cover w-full h-full rounded-lg max-w-full block border-none">
-        </a>
-        <div class="z-[2] relative">
-          <div class="flex flex-wrap mt-4">
-            {{#primary_tag}}
-            <a href="{{url}}" class="index-tag text-sm dark:text-slate-400 inline-flex relative z-[1] pr-4 pl-4 leading-6 h-7 border border-dotted border-slate-800 rounded-xl bg-transparent transition-all" {{#if accent_color}}style="--color-accent: {{accent_color}}; border-color: var(--color-accent);"{{/if}}>{{name}}</a>
-            {{/primary_tag}}
-          </div>
-          <h2 class="text-2xl dark:text-slate-400 font-bold leading-5 mt-4">
-            <a href="{{url}}">{{title}}</a>
-          </h2>
-          <div class="text-sm dark:text-slate-400 mb-6 h-auto overflow-hidden leading-6">
+<div class="grid grid-cols-12 gap-4 mx-auto max-w-7xl">
+  <!-- start main featured section -->
+  <div class="col-span-full lg:col-span-7 hero-big p-6 rounded-lg border shadow-sm flex-col hero-big bg-transparent border-dotted border-slate-300 dark:border-slate-800">
+    {{#get "posts" limit="1" include="tags,authors"}}
+    {{#foreach posts}}
+    <article class="hero-big p-6 rounded-lg flex-col hero-big bg-transparent ">
+      <a href="{{url}}" class="block w-full mb-4">
+        <img src="{{feature_image}}" alt="{{title}}" class="rounded-lg object-cover w-full">
+      </a>
+      <div class="flex flex-wrap mt-4">
+        {{#primary_tag}}
+          <a href="{{url}}" class="index-tag text-sm inline-flex relative dark:text-slate-400 border border-dotted z-[1] pr-4 pl-4 leading-6 h-7 border-slate-800 bg-transparent dark:border-slate-800 rounded-full px-3 mb-2" {{#if accent_color}}style="--color-accent: {{accent_color}}; border-color: var(--color-accent);"{{/if}}>{{name}}</a>
+        {{/primary_tag}}
+      </div>
+      <h2 class="text-2xl font-bold mb-4 dark:text-slate-400 leading-5 mt-4"><a href="{{url}}">{{title}}</a></h2>
+      <div class=" text-base flex-1 dark:text-slate-400 mb-6 h-auto overflow-hidden leading-6">
             {{excerpt}}
-          </div>
-          <div class="flex flex-wrap">
+      </div>
+      <div class="flex flex-wrap">
             <div class="mr-6 flex flex-wrap">
               {{#if authors}}
               {{#foreach authors}}
@@ -35,43 +31,28 @@
               <span class="ml-1 dark:text-slate-400 text-xs">{{reading_time}}</span>
             </span>
           </div>
-        </div>
-      </article>
-      {{/foreach}}
-      {{/get}}
-    </div>
+    </article>
+    {{/foreach}}
+    {{/get}}
   </div>
-  <!-- end section 1 -->
+  <!-- end main featured section -->
 
-  <!-- start section 2 -->
-  <div class="col-span-5 row-span-2">
-    <div class="flex flex-wrap gap-1">
-      {{#get "posts" filter="featured:true" limit="4" order="published_at desc" as |featuredPosts|}}
-      {{#foreach featuredPosts}}
-      <article class="gap-x-4 bg-transparent border border-dotted border-slate-300 dark:border-slate-800 relative p-6 self-start gap-y-6 rounded-lg h-full w-full flex flex-wrap mt-2">
-        <a href="{{url}}" class="flex-grow-0 flex-shrink-0 basis-1/3 self-start z-[2] relative block w-full">
-          <img src="{{feature_image}}" alt="{{title}}" class="aspect-[5/4] object-cover w-full h-full rounded-lg max-w-full block border-0">
-        </a>
-        <div class="flex-grow flex-shrink basis-32 z-[2]">
-          <div class="flex flex-wrap">
-            <span class="mt-8"></span>
-          </div>
-          <h2 class="text-xl mb-0 font-bold leading-5">
-            <a href="{{url}}" class="bg-gradient-to-tr dark:text-slate-400 transition-colors">{{title}}</a>
-          </h2>
-          <div class="dark:text-slate-400 mt-10 text-sm">{{excerpt}}</div>
-        </div>
-      </article>
-      {{/foreach}}
-      {{/get}}
-    </div>
+  <!-- start secondary posts section -->
+  <div class="col-span-full lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+    {{#get "posts" filter="featured:true" limit="4" include="tags" order="published_at desc" as |featuredPosts|}}
+    {{#foreach featuredPosts}}
+    <article class="flex flex-col bg-transparent dark:bg-transprent border border-dotted border-slate-300 dark:border-slate-800 flex-wrap mt-2 rounded-lg p-4">
+      <a href="{{url}}" class="block w-full mb-4 flex-shrink-0">
+        <img src="{{feature_image}}" alt="{{title}}" class="rounded-lg object-cover w-full h-48">
+      </a>
+      {{#primary_tag}}
+     <a href="{{url}}" class="index-tag items-center text-xs inline-flex relative border border-dotted z-[1] px-2 py-1 dark:text-slate-100 border-slate-800 bg-transparent dark:border-slate-800 rounded-full mt-3 mb-2" {{#if accent_color}}style="--color-accent: {{accent_color}}; border-color: var(--color-accent);"{{/if}}>{{name}}</a>
+      {{/primary_tag}}
+      <h2 class="text-lg leading-6 font-bold mb-4 text-gray-800 hover:text-gray-600 dark:text-slate-400 mt-4"><a href="{{url}}">{{title}}</a></h2>
+      <div class="dark:text-slate-400 text-xs h-auto overflow-hidden leading-5">{{excerpt}}</div>
+    </article>
+    {{/foreach}}
+    {{/get}}
   </div>
-  {{!-- end section 2 --}}
+  <!-- end secondary posts section -->
 </div>
-
-<style>
-  .hero-big {
-    max-height: 93%;
-  }
-</style>
-
