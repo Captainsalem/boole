@@ -40,17 +40,17 @@
             <div class="flex items-center -space-x-3">
                 <a href="{{primary_author.url}}" title="{{primary_author.name}}" class="block">
                     <img src="{{img_url primary_author.profile_image}}" alt="avatar"
-                        class="relative inline-block h-9 w-9 !rounded-full border border-white object-cover object-center hover:z-10">
+                        class="relative card-excerpt inline-block h-9 w-9 !rounded-full border border-white object-cover object-center hover:z-10">
                 </a>
             </div>
             {{/if}}
             {{#if reading_time}}
             <div class="flex gap-1 items-center">
                 <span>{{> "icons/clock"}}</span>
-                <span class="text-sm">{{reading_time}}</span>
+                <span class="text-sm card-excerpt">{{reading_time}}</span>
             </div>
             {{/if}}
-            <time class="block text-base antialiased font-normal leading-relaxed text-inherit"
+            <time class="block text-sm antialiased font-normal leading-relaxed card-excerpt"
                 datetime="{{date format='YYYY-MM-DD'}}">
                 {{date format="MMMM DD, YYYY"}}
             </time>
