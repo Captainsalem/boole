@@ -10,7 +10,7 @@
     {{/get}}
     <div class="h2 font-bold mb-4">{{date format="YYYY"}}</div>
     <div
-      class="mt-2 mb-2 border-x border-t rounded-lg border-gray-300 dark:border-gray-700"
+      class="mt-2 mb-2 border-x border-t rounded-lg border-secondary-300 dark:border-secondary-700"
     >
       {{#foreach posts visibility="all"}}
         <div class="year-section">
@@ -18,18 +18,18 @@
             <article class="flex justify-start items-center p-4">
               <time
                 datetime="{{date published_at format="YYYY-MM-DD"}}"
-                class="text-gray-600 dark:text-gray-400 bg-gray-300 dark:bg-gray-800 rounded-lg p-2"
+                class="text-secondary-600 dark:text-secondary-400 bg-secondary-300 dark:bg-secondary-800 rounded-lg p-2"
               >
                 {{date published_at format="DD MMM YYYY"}}
               </time>
               <h2 class="text-lg text-medium font-normal ml-4 mt-4">
                 <a
                   href="{{url}}"
-                  class="text-gray-600 hover:text-gray-800 dark:text-gray-400 hover:underline transition duration-300"
+                  class="text-secondary-600 hover:text-secondary-800 dark:text-secondary-400 hover:underline transition duration-300"
                 >{{title}}</a>
               </h2>
             </article>
-            <hr class="h-px mt-1 mb-1 bg-gray-200 border-0 dark:bg-gray-700" />
+            <hr class="h-px mt-1 mb-1 bg-secondary-200 border-0 dark:bg-secondary-700" />
           </div>
         </div>
       {{/foreach}}
@@ -40,7 +40,7 @@
         {{#if prev}}
           <a
             href="{{page_url prev}}"
-            class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-gray-800 rounded-s hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            class="flex items-center justify-center px-3 h-8 text-sm font-medium text-secondary-100 bg-secondary-800 rounded-s hover:bg-secondary-900 dark:bg-secondary-800 dark:border-secondary-700 dark:text-secondary-400 dark:hover:bg-gray-700 dark:hover:text-secondary-100"
           >
             &larr; Prev
           </a>
@@ -48,7 +48,7 @@
         {{#if next}}
           <a
             href="{{page_url next}}"
-            class="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-gray-800 border-0 border-s border-gray-700 rounded-e hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            class="flex items-center justify-center px-3 h-8 text-sm font-medium text-secondary-100 bg-secondary-800 border-0 border-s border-secondary-700 rounded-e hover:bg-secondary-900 dark:bg-secondary-800 dark:border-secondary-700 dark:text-secondary-400 dark:hover:bg-secondary-700 dark:hover:text-secondary-100"
           >
             Next &rarr;
           </a>

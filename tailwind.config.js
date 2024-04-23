@@ -21,7 +21,7 @@ module.exports = {
         },
         secondary: {
           DEFAULT: "#8387ad",
-          50: "#f6f6f9",
+          50: "#FFFFFF",
           100: "#ececf2",
           200: "#d4d5e3",
           300: "#afb1ca",

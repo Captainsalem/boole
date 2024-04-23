@@ -5,13 +5,13 @@
         <article class="mt-0 mr-auto mb-0 ml-auto {{post-class}}">
             {{#match @page.show_title_and_feature_image}}
             <h1
-                    class=" mt-16 mb-10 text-7xl text-center tracking-tight text-slate-900 dark:text-slate-400 md:text-4xl lg:text-4xl">
+                    class=" mt-16 mb-10 text-4xl text-center tracking-tight text-secondary-900 dark:text-secondary-400">
                     {{title}}</h1>
 
                 {{! post excerpt }}
                 <div class="post-excerpt text-justify justify-start mb-2 h-auto overflow-hidden max-w-3xl">
                     {{#if custom_excerpt}}
-                    <p class="text-left rtl:text-right text-gray-500 dark:text-gray-400">{{custom_excerpt}}</p>
+                    <p class="text-left rtl:text-right text-secondary-500 dark:text-secondary-400">{{custom_excerpt}}</p>
                     {{/if}}
                 </div>
             {{/match}}

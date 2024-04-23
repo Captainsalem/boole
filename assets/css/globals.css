@@ -132,6 +132,10 @@ hr, blockquote, .kg-card.kg-header-card {
   @apply bg-gradient-to-br from-primary-950 via-primary-700 to-primary-400 rounded-full font-bold text-white;
 }
 
+.btn-gradient-2 {
+  @apply bg-gradient-to-br from-primary-950 via-primary-700 to-primary-400 font-bold text-white;
+}
+
 .prose :where(ul):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
   font-size: 14px;
 }

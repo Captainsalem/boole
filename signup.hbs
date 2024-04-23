@@ -3,7 +3,7 @@
 
   <div class="h-screen flex justify-center items-center">
   <div
-    class=" mt-12 mx-auto w-full max-w-sm bg-white/50 border border-dotted dark:bg-slate-900/50  border-gray-200 rounded-xl shadow-sm dark:bg-slate-900 dark:border-slate-800 card-excerpt hover-glow">
+    class=" mt-12 mx-auto w-full max-w-sm bg-secondary-100/50 border border-dotted dark:bg-secondary-900/50  border-secondary-200 rounded-xl shadow-sm dark:bg-secondary-900 dark:border-secondary-800 card-excerpt hover-glow">
     <div class="p-4 sm:p-7">
       <div class="mr-0 mb-10 text-center">
         <a href="{{@site.url}}" class=" display:none">
@@ -11,15 +11,15 @@
         </a>
       </div>
       <div class="text-center">
-        <h1 class="block text-2xl font-bold text-gray-800 dark:text-white">Sign Up with Email</h1>
-        <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">
+        <h1 class="block text-2xl font-bold text-secondary-800 dark:text-secondary-100">Sign Up with Email</h1>
+        <p class="mt-2 text-sm text-secondary-600 dark:text-secondary-300">
           We are delighted for you to join us!
         </p>
       </div>
 
       <div class="mt-5">
         <button type="button"
-          class=" cursor-not-allowed w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-slate-700 dark:text-white dark:hover:bg-slate-800">
+          class=" cursor-not-allowed w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-secondary-200 bg-secondary-100 text-secondary-800 shadow-sm hover:bg-secondary-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-secondary-900 dark:border-secondary-700 dark:text-secondary-100 dark:hover:bg-secondary-800">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="icon icon-tabler icons-tabler-outline icon-tabler-signature">
@@ -30,7 +30,7 @@
           We will send you a link.
         </button>
         <div
-          class="py-3 flex items-center text-xs text-gray-400 uppercase before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6 dark:text-slate-500 dark:before:border-slate-600 dark:after:border-slate-600">
+          class="py-3 flex items-center text-xs text-secondary-400 uppercase before:flex-1 before:border-t before:border-secondary-200 before:me-6 after:flex-1 after:border-t after:border-secondary-200 after:ms-6 dark:text-secondary-500 dark:before:border-secondary-600 dark:after:border-secondary-600">
           |</div>
         <!-- Form -->
         <form data-members-form="signup">
@@ -39,11 +39,11 @@
             {{!-- start name form group --}}
             <div>
               <div class="flex justify-between items-center">
-                <label for="name" class="block text-sm mb-2 dark:text-white">Name</label>
+                <label for="name" class="block text-sm mb-2 dark:text-secondary-100">Name</label>
               </div>
               <div class="relative">
                 <input data-members-name type="text" id="name" name="name"
-                  class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-purple-500 focus:ring-purple-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-slate-700 dark:text-slate-400 dark:placeholder-slate-500 dark:focus:ring-slate-600"
+                  class="py-3 px-4 block w-full border border-secondary-200 rounded-lg text-sm focus:border-primary-500 focus:ring-primary-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-secondary-900 dark:border-secondary-700 dark:text-secondary-400 dark:placeholder-secondary-500 dark:focus:ring-secondary-600"
                   required>
                 <div class="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
                   <svg class="size-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"
@@ -58,10 +58,10 @@
 
             {{!-- start email group --}}
             <div>
-              <label for="email" class="block text-sm mb-2 dark:text-white">Email address</label>
+              <label for="email" class="block text-sm mb-2 dark:text-secondary-100">Email address</label>
               <div class="relative">
                 <input data-members-email type="email" id="email" name="email"
-                  class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-purple-500 focus:ring-purple-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-slate-700 dark:text-slate-400 dark:placeholder-slate-500 dark:focus:ring-slate-600"
+                  class="py-3 px-4 block w-full border border-secondary-200 rounded-lg text-sm focus:border-primary-500 focus:ring-primary-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-secondary-900 dark:border-secondary-700 dark:text-secondary-400 dark:placeholder-secondary-500 dark:focus:ring-secondary-600"
                   required aria-describedby="email-error">
                 <div class="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
                   <svg class="size-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"
@@ -75,11 +75,11 @@
             {{!-- end email form group --}}
 
             <div class="flex items-center">
-              <p data-members-success class="text-purple-700 dark:text-purple-300"></p>
+              <p data-members-success class="text-primary-700 dark:text-primary-300"></p>
               <p data-members-error class="text-red-700 dark:text-red-500 text-sm"></p>
             </div>
             <button type="submit"
-              class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 disabled:opacity-50 disabled:pointer-events-none">Sign
+              class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-gradient-to-br from-primary-600 to-primary-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-primary-300 dark:focus:ring-primary-800 disabled:opacity-50 disabled:pointer-events-none">Sign
               in</button>
               <p class="text-sm text-center pt-2"><a href="/">Go Home</a></p>
           </div>
