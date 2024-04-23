@@ -14,12 +14,22 @@
         <img src="{{feature_image}}" alt="{{title}}" class="rounded-lg object-cover w-full">
       </a>
       <div class="flex flex-wrap mt-4">
+        {{#if featured}}
         {{#primary_tag}}
         <a href="{{url}}"
-          class="index-tag text-sm inline-flex relative dark:text-slate-400 border border-dotted z-[1] pr-4 pl-4 leading-6 h-7 border-slate-800 bg-transparent dark:border-slate-800 rounded-full px-3 mb-2 card-excerpt"
-          {{#if accent_color}}style="--color-accent: {{accent_color}}; border-color: var(--color-accent);"
-          {{/if}}>{{name}}</a>
+          class="index-tag text-sm dark:text-slate-400 inline-flex items-center relative card-excerpt z-[1] pr-4 pl-4 leading-6 h-7 border border-dotted border-slate-800 rounded-lg bg-transparent transition-all"
+          {{#if
+          accent_color}}style="--color-accent: {{accent_color}}; border-color: var(--color-accent); color: var(--color-accent);"
+          {{/if}}>
+          {{name}}
+          <span
+            style="color: inherit; width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center;"
+            class=" pl-1">
+            {{> "icons/fire"}}
+          </span>
+        </a>
         {{/primary_tag}}
+        {{/if}}
       </div>
       <h2 class="text-2xl font-bold mb-4 dark:text-slate-400 leading-5 mt-4"><a href="{{url}}">{{title}}</a></h2>
       <div class=" text-base flex-1 dark:text-slate-400 mb-6 h-auto overflow-hidden leading-6 card-excerpt">
@@ -55,12 +65,24 @@
       <a href="{{url}}" class="block w-full mb-4 flex-shrink-0">
         <img src="{{feature_image}}" alt="{{title}}" class="rounded-lg object-cover w-full h-48">
       </a>
-      {{#primary_tag}}
-      <a href="{{url}}"
-        class="index-tag items-center text-xs inline-flex relative border border-dotted z-[1] px-2 py-1 dark:text-slate-100 border-slate-800 bg-transparent dark:border-slate-800 rounded-full mt-3 mb-2 card-excerpt"
-        {{#if accent_color}}style="--color-accent: {{accent_color}}; border-color: var(--color-accent);"
-        {{/if}}>{{name}}</a>
-      {{/primary_tag}}
+      <div class="flex flex-wrap mt-4">
+        {{#if featured}}
+        {{#primary_tag}}
+        <a href="{{url}}"
+          class="index-tag text-sm dark:text-slate-400 inline-flex items-center relative card-excerpt z-[1] pr-4 pl-4 leading-6 h-7 border border-dotted border-slate-800 rounded-lg bg-transparent transition-all"
+          {{#if
+          accent_color}}style="--color-accent: {{accent_color}}; border-color: var(--color-accent); color: var(--color-accent);"
+          {{/if}}>
+          {{name}}
+          <span
+            style="color: inherit; width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center;"
+            class=" pl-1">
+            {{> "icons/fire"}}
+          </span>
+        </a>
+        {{/primary_tag}}
+        {{/if}}
+      </div>
       <h2 class="text-lg leading-6 font-bold mb-4 text-gray-800 hover:text-gray-600 dark:text-slate-400 mt-4"><a
           href="{{url}}">{{title}}</a></h2>
       <div class="dark:text-slate-400 text-xs h-auto overflow-hidden leading-5 card-excerpt">{{excerpt}}</div>
@@ -70,6 +92,3 @@
   </div>
   <!-- end secondary posts section -->
 </div>
-
-
-
