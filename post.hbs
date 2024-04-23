@@ -11,7 +11,7 @@
   {{#if featured}}
     {{#primary_tag}}
     <a href="{{url}}"
-      class="index-tag text-sm dark:text-slate-400 inline-flex items-center relative card-excerpt z-[1] pr-4 pl-4 leading-6 h-7 border border-dotted border-slate-800 rounded-lg bg-transparent transition-all"
+      class="index-tag text-sm dark:text-secondary-400 inline-flex items-center relative card-excerpt z-[1] pr-4 pl-4 leading-6 h-7 border border-dotted border-secondary-800 rounded-lg bg-transparent transition-all"
       {{#if accent_color}}style="--color-accent: {{accent_color}}; border-color: var(--color-accent); color: var(--color-accent);"{{/if}}>
       {{name}}
       <span style="color: inherit; width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center;" class=" pl-1">
@@ -25,13 +25,13 @@
 
                 {{! post title }}
                 <h1
-                    class="mb-4 mt-4 h1 text-4xl font-bold leading-snug tracking-tight text-gray-900 md:text-4xl lg:text-4xl dark:text-white">
+                    class="mb-4 mt-4 h1 text-4xl font-bold leading-snug tracking-tight text-secondary-900 md:text-4xl lg:text-4xl dark:text-secondary-100">
                     {{title}}</h1>
 
                 {{! post excerpt }}
                 <div class="post-excerpt text-justify justify-start mb-2 h-auto overflow-hidden max-w-3xl">
                     {{#if custom_excerpt}}
-                    <p class="text-left rtl:text-right text-gray-500 dark:text-gray-400">{{custom_excerpt}}</p>
+                    <p class="text-left rtl:text-right text-secondary-500 dark:text-secondary-400">{{custom_excerpt}}</p>
                     {{/if}}
                 </div>
 
@@ -44,7 +44,7 @@
                             class="author-image-wrap block w-10 h-10 -mr-3 relative p-1 dark:bg-inherit"
                             title="{{name}}">
                             <img src="{{profile_image}}"
-                                class="rounded-full hover:opacity-100 border-2 border-purple-500" alt="{{name}}">
+                                class="rounded-full hover:opacity-100 border-2 border-primary-500" alt="{{name}}">
                         </a>
                         {{/foreach}}
                     </div>
@@ -98,14 +98,14 @@
                 </div>
                 {{/if}}
                 {{! share article }}
-                <div class="justify-center gap-16 my-8 py-8 max-w-3xl flex flex-wrap border-t dark:border-slate-800">
+                <div class="justify-center gap-16 my-8 py-8 max-w-3xl flex flex-wrap border-t dark:border-secondary-800">
                     <div class="max-w-3xl flex-1">
                         <div class="share-wrap">
-                            <div class="text h4 text-gray-900 dark:text-inherit mb-4">Share this article:
+                            <div class="text h4 text-secondary-900 dark:text-inherit mb-4">Share this article:
                             </div>
                             <div class=" gap-4 flex flex-wrap">
                                 <!-- Twitter Share -->
-                                <a class="inline-flex items-center justify-center bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-gradient-to-bl from-purple-500 via-violet-600 to-blue-600 hover:text-white relative"
+                                <a class="inline-flex items-center justify-center bg-secondary-200 dark:bg-secondary-800 rounded-full hover:bg-gradient-to-bl from-primary-500 via-primary-600 to-primary-300 hover:text-secondary-100 relative"
                                     href="https://twitter.com/share?url={{url absolute='true'}}"
                                     title="Share on Twitter" target="_blank" rel="noopener"
                                     style="width: 50px; height: 50px;">
@@ -115,7 +115,7 @@
                                 </a>
 
                                 <!-- Facebook Share -->
-                                <a class="inline-flex items-center justify-center bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-gradient-to-bl from-purple-500 via-violet-600 to-blue-600 hover:text-white relative"
+                                <a class="inline-flex items-center justify-center bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-gradient-to-bl from-primary-500 via-primary-600 to-primary-300 hover:text-secondary-100 relative"
                                     href="https://www.facebook.com/sharer/sharer.php?u={{url absolute='true'}}"
                                     title="Share on Facebook" target="_blank" rel="noopener"
                                     style="width: 50px; height: 50px;">
@@ -125,7 +125,7 @@
                                 </a>
 
                                 <!-- Pinterest Share -->
-                                <a class="inline-flex items-center justify-center bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-gradient-to-bl from-purple-500 via-violet-600 to-blue-600 hover:text-white relative"
+                                <a class="inline-flex items-center justify-center bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-gradient-to-bl from-primary-500 via-primary-600 to-primary-300 hover:text-secondary-100 relative"
                                     href="http://pinterest.com/pin/create/button/?url={{url absolute='true'}}&media={{feature_image}}"
                                     title="Share on Pinterest" target="_blank" rel="noopener"
                                     style="width: 50px; height: 50px;">
@@ -135,7 +135,7 @@
                                 </a>
 
                                 <!-- WhatsApp Share -->
-                                <a class="inline-flex items-center justify-center bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-gradient-to-bl from-purple-500 via-violet-600 to-blue-600 hover:text-white relative"
+                                <a class="inline-flex items-center justify-center bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-gradient-to-bl from-primary-500 via-primary-600 to-primary-300 hover:text-secondary-100 relative"
                                     href="whatsapp://send?text={{url absolute='true'}}"
                                     data-action="share/whatsapp/share" title="Share on Whatsapp" target="_blank"
                                     rel="noopener" style="width: 50px; height: 50px;">
@@ -145,7 +145,7 @@
                                 </a>
 
                                 <!-- LinkedIn Share -->
-                                <a class="inline-flex items-center justify-center bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-gradient-to-bl from-purple-500 via-violet-600 to-blue-600 hover:text-white relative"
+                                <a class="inline-flex items-center justify-center bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-gradient-to-bl from-primary-500 via-primary-600 to-primary-300 hover:text-secondary-100 relative"
                                     href="http://www.linkedin.com/shareArticle?mini=true&url={{url absolute='true'}}"
                                     title="Share on LinkedIn" target="_blank" rel="noopener"
                                     style="width: 50px; height: 50px;">
@@ -155,7 +155,7 @@
                                 </a>
 
                                 <!-- Email Share -->
-                                <a class="inline-flex items-center justify-center bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-gradient-to-bl from-purple-500 via-violet-600 to-blue-600 hover:text-white relative"
+                                <a class="inline-flex items-center justify-center bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-gradient-to-bl from-primary-500 via-primary-600 to-primary-300 hover:text-secondary-100 relative"
                                     href="mailto:?subject={{title}}&body={{url absolute='true'}}" title="Send via email"
                                     target="_blank" rel="noopener" style="width: 50px; height: 50px;">
                                     <svg style="width: 24px; height: 24px;" aria-hidden="true">
@@ -164,7 +164,7 @@
                                 </a>
                                 
                                 {{!-- Copy Link --}}
-                                <a class="copy-link copy copy-link inline-flex items-center justify-center bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-gradient-to-bl from-purple-500 via-violet-600 to-blue-600 hover:text-white relative"
+                                <a class="copy-link copy copy-link inline-flex items-center justify-center bg-slate-200 dark:bg-slate-800 rounded-full hover:bg-gradient-to-bl from-primary-500 via-primary-600 to-primary-300 hover:text-secondary-100 relative"
                                     href="#" onclick="copyLinkToClipboard(this); return false;"
                                     data-url="{{url absolute='true'}}"
                                     data-clipboard-text="{{url absolute='true'}}" title="Copy the permalink"
