@@ -1,5 +1,7 @@
-{{!< default}} {{#if @member}} <a href="javascript:" data-members-signout>Sign out</a>
+{{!< custom-default}} {{#if @member}} <a href="javascript:" data-members-signout>Sign out</a>
   {{else}}
+
+  <div class="h-screen flex justify-center items-center">
   <div
     class=" mt-12 mx-auto w-full max-w-sm bg-white/50 border border-dotted dark:bg-slate-900/50  border-gray-200 rounded-xl shadow-sm dark:bg-slate-900 dark:border-slate-800 card-excerpt hover-glow">
     <div class="p-4 sm:p-7">
@@ -79,10 +81,12 @@
             <button type="submit"
               class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 disabled:opacity-50 disabled:pointer-events-none">Sign
               in</button>
+              <p class="text-sm text-center pt-2"><a href="/">Go Home</a></p>
           </div>
         </form>
 
       </div>
     </div>
+  </div>
   </div>
   {{/if}}

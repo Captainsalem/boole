@@ -1,0 +1,55 @@
+<html lang="{{@site.locale}}">
+
+<head>
+  {{! Document Settings }}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  {{! Base Meta }}
+  <title>{{meta_title}}</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{! Built stylesheet }}
+  <link rel="stylesheet" type="text/css" href="{{asset 'build/styles.css'}}" />
+  {{!-- prism js css file --}}
+  <link rel="stylesheet" type="text/css" href="{{asset 'css/prism-theme.css'}}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+
+
+  {{! This tag outputs SEO meta+structured data and other important settings }}
+  {{ghost_head}}
+  {{!-- This tag outputs scripts as saved in "code injection" scripts. --}}
+  {{ghost_foot}}
+</head>
+
+<body class="text-gray-900 dark:text-gray-200 transition-colors duration-500 max-w-[1400px] mx-auto text-lg">
+  <!-- Light Mode Background -->
+<div class="fixed inset-0 bg-white z-[-1]">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#fff5e7,transparent)]">
+    </div>
+</div>
+
+  <!-- Dark Mode Background -->
+  <div class="dark:fixed dark:inset-0 dark:bg-slate-950 dark:z-[-1]">
+    <div class="dark:absolute dark:inset-0 dark:bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)]">
+    </div>
+  </div>
+
+<img class="post-image"
+    srcset="{{img_url feature_image size="s"}} 300w,
+            {{img_url feature_image size="m"}} 600w,
+            {{img_url feature_image size="l"}} 1000w,
+            {{img_url feature_image size="xl"}} 2000w"
+    sizes="(max-width: 1000px) 400px, 700px"
+    src="{{img_url feature_image size="m"}}"
+    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+/>
+  {{{body}}}
+  {{!-- prims.js script file --}}
+  <script src="{{asset 'js/prism.js'}}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+
+</html>
