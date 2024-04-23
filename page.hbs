@@ -1,6 +1,38 @@
 {{!< default}}
 {{#post}}
-{{#match @page.show_title_and_feature_image}}
-{{content}}
-{{/match}}
+<main class="flex-grow p-1 block">
+    <div class="max-w-3xl mx-auto w-full pr-4 pl-4 mr-auto ml-auto card-excerpt">
+        <article class="mt-0 mr-auto mb-0 ml-auto {{post-class}}">
+            {{#match @page.show_title_and_feature_image}}
+            <h1
+                    class=" mt-16 mb-10 text-7xl text-center tracking-tight text-slate-900 dark:text-slate-400 md:text-4xl lg:text-4xl">
+                    {{title}}</h1>
+
+                {{! post excerpt }}
+                <div class="post-excerpt text-justify justify-start mb-2 h-auto overflow-hidden max-w-3xl">
+                    {{#if custom_excerpt}}
+                    <p class="text-left rtl:text-right text-gray-500 dark:text-gray-400">{{custom_excerpt}}</p>
+                    {{/if}}
+                </div>
+            {{/match}}
+            {{#if feature_image}}
+                <figure class="max-w-3xl mt-10 mb-10 mx-auto">
+                    <img class="w-full rounded-lg" srcset="{{img_url feature_image size=" s"}} 300w, {{img_url
+                        feature_image size="m" }} 600w, {{img_url feature_image size="l" }} 1000w, {{img_url
+                        feature_image size="xl" }} 2000w" sizes="(max-width: 700px) 1400px, 92vw"
+                        src="{{img_url feature_image size=" xl"}}"
+                        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+                    {{#if feature_image_caption}}
+                    <figcaption class="text-sm text-center mt-2">{{feature_image_caption}}</figcaption>
+                    {{/if}}
+                </figure>
+                {{/if}}
+            <div class="flex flex-wrap justify-center gap-8 max-w-3xl mr-auto ml-auto prose dark:prose-invert single-post">
+                <div class="text-lg max-w-3xl min-w-96 flex-1 post-content single-post">
+                    {{content}}
+                </div>
+            </div>
+        </article>
+    </div>
+</main>
 {{/post}}
