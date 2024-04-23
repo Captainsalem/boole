@@ -51,9 +51,12 @@
                 {{date format="MMMM DD, YYYY"}}
             </time>
             <div class="flex items-center">
-                <a href="{{url}}">
-                <span class="hover:animate-ping">{{> "icons/arrow-up-right"}}</span>
+                {{#if access}}
+                <span class="hover:animate-ping bg-purple-600 rounded-full p-1 text-white dark:text-slate-400">{{> "icons/unlock"}}</span>
+                {{else}}
+                <span class="hover:animate-ping bg-purple-600 rounded-full p-1 text-white dark:text-slate-400">{{> "icons/lock"}}</span>
                 </a>
+                {{/if}}
             </div>
         </div>
     </div>
