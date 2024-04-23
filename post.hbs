@@ -86,13 +86,16 @@
                 {{/if}}
 
 
+                {{#if access}}
                 {{! post content }}
                 <div class="flex flex-wrap justify-center gap-8 max-w-3xl mr-auto ml-auto prose dark:prose-invert">
                     <div class="text-lg max-w-3xl min-w-96 flex-1 post-content">
                         {{content}}
                     </div>
+                    {{else}}
+                    {{> content-cta}}
                 </div>
-
+                {{/if}}
                 {{! share article }}
                 <div class="justify-center gap-16 my-8 py-8 max-w-3xl flex flex-wrap border-t dark:border-slate-800">
                     <div class="max-w-3xl flex-1">
