@@ -6,8 +6,8 @@ as |tiers|
 <div class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 card-excerpt">
     <!-- Title -->
     <div class="mx-auto mb-10 max-w-2xl text-center lg:mb-14">
-        <h2 class="text-2xl font-bold dark:text-white md:text-4xl md:leading-tight">Membership</h2>
-        <p class="mt-1 text-gray-600 dark:text-gray-400">
+        <h2 class="text-2xl font-bold dark:text-secondary-100 md:text-4xl md:leading-tight">Membership</h2>
+        <p class="mt-1 text-secondary-600 dark:text-secondary-400">
             Choose your subscription plan and get access to different member-only
             benefits.</p>
     </div>
@@ -16,19 +16,19 @@ as |tiers|
     <div class="mb-4 flex justify-center">
         <div class="flex items-center">
             <label for="toggle-count-switch"
-                class="mr-2 inline-block cursor-pointer text-sm text-gray-800 dark:text-gray-200">
+                class="mr-2 inline-block cursor-pointer text-sm text-secondary-800 dark:text-secondary-200">
                 Monthly
             </label>
             <div
-                class="switch relative h-7 w-[3.25rem] cursor-pointer rounded-full bg-gray-200 transition-colors duration-200 ease-in-out dark:bg-gray-700">
+                class="switch relative h-7 w-[3.25rem] cursor-pointer rounded-full bg-secondary-200 transition-colors duration-200 ease-in-out dark:bg-secondary-700">
                 <input id="toggle-count-switch" name="toggle-count-switch" role="switch" type="checkbox" checked
                     onchange="onDataPlanSwitch()"
                     class="js-plan-toggle absolute z-10 h-full w-full cursor-pointer opacity-0" />
                 <span
-                    class="handle absolute left-0 top-0 h-7 w-7 rounded-full bg-purple-200 shadow transition-transform duration-200"></span>
+                    class="handle absolute left-0 top-0 h-7 w-7 rounded-full bg-primary-200 shadow transition-transform duration-200"></span>
             </div>
             <label for="toggle-count-switch"
-                class="ml-2 inline-block cursor-pointer text-sm text-gray-800 dark:text-gray-200">
+                class="ml-2 inline-block cursor-pointer text-sm text-secondary-800 dark:text-secondary-200">
                 Annual
             </label>
         </div>
@@ -39,35 +39,35 @@ as |tiers|
     <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:items-center">
         {{#foreach tiers}}
         <!-- Card -->
-        <div class="flex flex-col rounded-xl border border-dotted border-gray-200 p-8 text-center dark:border-gray-700 hover-glow card-excerpt">
-            <h4 class="text-lg font-medium text-gray-800 dark:text-gray-200">{{name}}</h4>
+        <div class="flex flex-col rounded-xl border border-dotted border-secondary-200 p-8 text-center dark:border-secondary-700 hover-glow card-excerpt">
+            <h4 class="text-lg font-medium text-secondary-800 dark:text-secondary-200">{{name}}</h4>
 
             {{#match type "free"}}
-            <span class="mt-7 text-5xl font-bold text-gray-800 dark:text-gray-200">{{price 0 currency="USD"}}</span>
+            <span class="mt-7 text-5xl font-bold text-secondary-800 dark:text-secondary-200">{{price 0 currency="USD"}}</span>
             {{/match}}
 
             {{#if monthly_price}}
-            <span data-plan="monthly" class="mt-7 text-5xl font-bold text-gray-800 dark:text-gray-200">{{price
+            <span data-plan="monthly" class="mt-7 text-5xl font-bold text-secondary-800 dark:text-secondary-200">{{price
                 monthly_price currency=currency}}
                 <span class="text-xs">{{t "/month"}}</span></span>
             {{/if}}
 
             {{#if yearly_price}}
-            <span data-plan="annual" class="price mt-7 text-5xl font-bold text-gray-800 dark:text-gray-200">{{price
+            <span data-plan="annual" class="price mt-7 text-5xl font-bold text-secondary-800 dark:text-secondary-200">{{price
                 yearly_price currency=currency}}
                 <span class="text-xs">{{t "/year"}}</span>
             </span>
             <div class="flex flex-col items-center pt-2 pb-2">
                 <span data-discount data-plan="annual" data-monthly-price="{{price monthly_price}}"
                     data-yearly-price="{{price yearly_price}}"
-                    class="discount mt-3 inline-block whitespace-nowrap rounded-lg bg-gradient-to-bl from-purple-500 via-violet-600 to-blue-600 px-2.5 py-1 text-[11px] font-semibold uppercase leading-5 tracking-wide text-white"
+                    class="discount mt-3 inline-block whitespace-nowrap rounded-lg btn-gradient-2 px-2.5 py-1 text-[11px] font-semibold uppercase leading-5 tracking-wide text-white"
                     style="display: inline-block; text-align: center; max-width: fit-content;">
                     {{t "discount"}}
                 </span>
             </div>
             {{/if}}
 
-            <p class="mt-2 text-sm text-gray-500">{{description}}</p>
+            <p class="mt-2 text-sm text-secondary-500">{{description}}</p>
             <ul class="mt-7 space-y-2.5 text-sm">
                 {{#foreach benefits as |benefit|}}
                 <li class="flex space-x-2">
@@ -85,7 +85,7 @@ as |tiers|
 
             {{#match type "free"}}
             <a href="/signup"
-                class="mt-5 inline-flex items-center justify-center gap-x-2 rounded-lg border dark:border-dotted border-transparent bg-gradient-to-br from-purple-600 to-blue-500 px-4 py-3 text-sm font-semibold hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300 disabled:pointer-events-none disabled:opacity-50 dark:focus:ring-blue-800"
+                class="mt-5 inline-flex items-center justify-center gap-x-2 rounded-lg border dark:border-dotted border-transparent btn-gradient-2 px-4 py-3 text-sm font-semibold hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300 disabled:pointer-events-none disabled:opacity-50 dark:focus:ring-blue-800"
                 href="#">
                 Subscribe For Free
             </a>
@@ -93,7 +93,7 @@ as |tiers|
 
             {{#if monthly_price}}
             <a href="javascript:" data-plan="monthly" data-portal="signup/{{id}}/monthly"
-                class="mt-5 inline-flex items-center justify-center gap-x-2 rounded-lg border border-transparent bg-gradient-to-br from-purple-600 to-blue-500 px-4 py-3 text-sm font-semibold hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300 disabled:pointer-events-none disabled:opacity-50 dark:focus:ring-blue-800"
+                class="mt-5 inline-flex items-center justify-center gap-x-2 rounded-lg border border-transparent btn-gradient-2 px-4 py-3 text-sm font-semibold hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300 disabled:pointer-events-none disabled:opacity-50 dark:focus:ring-blue-800"
                 href="#">
                 Try Now
             </a>
@@ -101,7 +101,7 @@ as |tiers|
 
             {{#if yearly_price}}
             <a href="javascript:" data-plan="annual" data-portal="signup/{{id}}/yearly"
-                class="mt-5 inline-flex items-center justify-center gap-x-2 rounded-lg border border-transparent bg-gradient-to-br from-purple-600 to-blue-500 px-4 py-3 text-sm font-semibold hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300 disabled:pointer-events-none disabled:opacity-50 dark:focus:ring-blue-800"
+                class="mt-5 inline-flex items-center justify-center gap-x-2 rounded-lg border border-transparent btn-gradient-2 px-4 py-3 text-sm font-semibold hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-blue-300 disabled:pointer-events-none disabled:opacity-50 dark:focus:ring-blue-800"
                 href="#">
                 Let's Go
             </a>
