@@ -60,6 +60,19 @@
       "use_portal_links": {
         "type": "boolean",
         "default": false
+      },
+      "font_family": {
+        "type": "select",
+        "options": [
+          "System font",
+          "Literata & Inter",
+          "Inter",
+          "Bitter",
+          "Outfit",
+          "Space Grotesk",
+          "Inconsolata"
+        ],
+        "default": "System font"
       }
     }
   },
