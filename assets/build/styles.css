@@ -2162,7 +2162,6 @@ video {
   background-color: rgb(236 236 242 / 0.5);
 }
 
->>>>>>> parent of e307747 (add color-scheme to pages)
 .bg-\[radial-gradient\(circle_500px_at_50\%_200px\2c \#fff5e7\2c transparent\)\] {
   background-image: radial-gradient(circle 500px at 50% 200px,#fff5e7,transparent);
 }
@@ -2209,14 +2208,6 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-<<<<<<< HEAD
-.via-primary-600 {
-  --tw-gradient-to: rgb(105 106 139 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #696A8B var(--tw-gradient-via-position), var(--tw-gradient-to);
-}
-
-=======
->>>>>>> parent of e307747 (add color-scheme to pages)
 .via-violet-600 {
   --tw-gradient-to: rgb(124 58 237 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), #7c3aed var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -2230,17 +2221,6 @@ video {
   --tw-gradient-to: #2563eb var(--tw-gradient-to-position);
 }
 
-<<<<<<< HEAD
-.to-primary-300 {
-  --tw-gradient-to: #AEB2C5 var(--tw-gradient-to-position);
-}
-
-.to-primary-500 {
-  --tw-gradient-to: #7E7F9C  var(--tw-gradient-to-position);
-}
-
-=======
->>>>>>> parent of e307747 (add color-scheme to pages)
 .to-purple-500 {
   --tw-gradient-to: #a855f7 var(--tw-gradient-to-position);
 }
@@ -2743,7 +2723,6 @@ video {
   color: rgb(131 135 173 / var(--tw-text-opacity));
 }
 
->>>>>>> parent of e307747 (add color-scheme to pages)
 .no-underline {
   text-decoration-line: none;
 }
@@ -2803,7 +2782,6 @@ video {
 =======
 .shadow-black\/5 {
   --tw-shadow-color: rgb(0 0 0 / 0.05);
->>>>>>> parent of e307747 (add color-scheme to pages)
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -3179,7 +3157,6 @@ hr, blockquote, .kg-card.kg-header-card {
   content: var(--tw-content);
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
->>>>>>> parent of e307747 (add color-scheme to pages)
 }
 
 .after\:absolute::after {
@@ -3228,7 +3205,6 @@ hr, blockquote, .kg-card.kg-header-card {
   content: var(--tw-content);
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
->>>>>>> parent of e307747 (add color-scheme to pages)
 }
 
 .first\:rounded-s-lg:first-child {
@@ -3287,17 +3263,6 @@ hr, blockquote, .kg-card.kg-header-card {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-<<<<<<< HEAD
-.hover\:bg-secondary-900:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(50 51 72 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-zinc-900:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(24 24 27 / var(--tw-bg-opacity));
-}
-
 =======
 >>>>>>> parent of e307747 (add color-scheme to pages)
 .hover\:bg-gradient-to-bl:hover {
@@ -3330,13 +3295,6 @@ hr, blockquote, .kg-card.kg-header-card {
   color: rgb(79 81 122 / var(--tw-text-opacity));
 }
 
-.hover\:text-secondary-800:hover {
-  --tw-text-opacity: 1;
-  color: rgb(56 57 84 / var(--tw-text-opacity));
-}
-
-=======
->>>>>>> parent of e307747 (add color-scheme to pages)
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -3359,7 +3317,6 @@ hr, blockquote, .kg-card.kg-header-card {
 .focus\:border-purple-500:focus {
   --tw-border-opacity: 1;
   border-color: rgb(168 85 247 / var(--tw-border-opacity));
->>>>>>> parent of e307747 (add color-scheme to pages)
 }
 
 .focus\:bg-secondary-100:focus {
@@ -3540,8 +3497,11 @@ hr, blockquote, .kg-card.kg-header-card {
   background-color: rgb(0 0 0 / 0.1);
 }
 
-=======
->>>>>>> parent of e307747 (add color-scheme to pages)
+.dark\:bg-secondary-700:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(65 67 99 / var(--tw-bg-opacity));
+}
+
 .dark\:bg-\[radial-gradient\(circle_500px_at_50\%_200px\2c \#3e3e3e\2c transparent\)\]:is(.dark *) {
   background-image: radial-gradient(circle 500px at 50% 200px,#3e3e3e,transparent);
 }
@@ -3653,7 +3613,6 @@ hr, blockquote, .kg-card.kg-header-card {
 .dark\:placeholder-slate-500:is(.dark *)::placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(100 116 139 / var(--tw-placeholder-opacity));
->>>>>>> parent of e307747 (add color-scheme to pages)
 }
 
 .dark\:shadow-sm:is(.dark *) {
@@ -3684,22 +3643,10 @@ hr, blockquote, .kg-card.kg-header-card {
   border-color: rgb(79 81 122 / var(--tw-border-opacity));
 }
 
-.dark\:after\:border-secondary-600:is(.dark *)::after {
-  content: var(--tw-content);
-  --tw-border-opacity: 1;
-  border-color: rgb(79 81 122 / var(--tw-border-opacity));
-=======
-.dark\:before\:border-slate-600:is(.dark *)::before {
-  content: var(--tw-content);
-  --tw-border-opacity: 1;
-  border-color: rgb(71 85 105 / var(--tw-border-opacity));
-}
-
 .dark\:after\:border-slate-600:is(.dark *)::after {
   content: var(--tw-content);
   --tw-border-opacity: 1;
   border-color: rgb(71 85 105 / var(--tw-border-opacity));
->>>>>>> parent of e307747 (add color-scheme to pages)
 }
 
 .dark\:hover\:bg-gray-700:hover:is(.dark *) {
@@ -3763,20 +3710,6 @@ hr, blockquote, .kg-card.kg-header-card {
 .dark\:focus\:ring-secondary-600:focus:is(.dark *) {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(79 81 122 / var(--tw-ring-opacity));
-}
-
-=======
->>>>>>> parent of e307747 (add color-scheme to pages)
-.dark\:focus\:ring-secondary-700:focus:is(.dark *) {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(65 67 99 / var(--tw-ring-opacity));
-}
-
-<<<<<<< HEAD
-=======
-.dark\:focus\:ring-slate-600:focus:is(.dark *) {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(71 85 105 / var(--tw-ring-opacity));
 }
 
 >>>>>>> parent of e307747 (add color-scheme to pages)
