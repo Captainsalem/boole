@@ -23,9 +23,15 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .single-post h3,
 .single-post h4,
 .single-post h5,
-.single-post h6,
+.single-post h6 {
+    font-family: inherit;
+    @apply dark:text-secondary-400;
+}
+
+
 .single-post p {
   font-family: inherit;
+  @apply dark:text-secondary-700;
 }
 .single-post p {
   font-size: 16px
@@ -35,13 +41,33 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-
+.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  @apply dark:text-primary-300;
+  font-weight: 600;
+  font-size: 0.875em;
+}
+.prose :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  @apply dark:text-primary-300;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.prose :where(ul):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  @apply dark:text-primary-300;
+}
+.prose :where(strong):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  @apply dark:text-secondary-400;
+  font-weight: 600;
+}
 @media (prefers-color-scheme: dark) {
   .single-post hr {
       border-color: #1f2937;
   }
 }
 
+.ghost-display * {
+  font-family: var(--font-body);
+  @apply dark:text-primary-300;
+}
 
 
 h1, .h1 {
