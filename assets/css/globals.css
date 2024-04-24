@@ -25,13 +25,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .single-post h5,
 .single-post h6 {
     font-family: inherit;
-    @apply dark:text-secondary-400;
+    @apply dark:text-secondary-200;
 }
 
 
 .single-post p {
   font-family: inherit;
-  @apply dark:text-secondary-700;
+  @apply dark:text-secondary-300;
 }
 .single-post p {
   font-size: 16px

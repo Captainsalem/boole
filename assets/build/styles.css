@@ -2859,7 +2859,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .single-post h5:is(.dark *),
 .single-post h6:is(.dark *) {
   --tw-text-opacity: 1;
-  color: rgb(131 135 173 / var(--tw-text-opacity));
+  color: rgb(212 213 227 / var(--tw-text-opacity));
 }
 
 .single-post p {
@@ -2868,7 +2868,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .single-post p:is(.dark *) {
   --tw-text-opacity: 1;
-  color: rgb(65 67 99 / var(--tw-text-opacity));
+  color: rgb(175 177 202 / var(--tw-text-opacity));
 }
 
 .single-post p {
