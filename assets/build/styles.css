@@ -2848,9 +2848,27 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .single-post h3,
 .single-post h4,
 .single-post h5,
-.single-post h6,
+.single-post h6 {
+  font-family: inherit;
+}
+
+.single-post h1:is(.dark *),
+.single-post h2:is(.dark *),
+.single-post h3:is(.dark *),
+.single-post h4:is(.dark *),
+.single-post h5:is(.dark *),
+.single-post h6:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(131 135 173 / var(--tw-text-opacity));
+}
+
 .single-post p {
   font-family: inherit;
+}
+
+.single-post p:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(65 67 99 / var(--tw-text-opacity));
 }
 
 .single-post p {
@@ -2863,10 +2881,53 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 2rem;
 }
 
+.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)):is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(174 178 197 / var(--tw-text-opacity));
+}
+
+.prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  font-weight: 600;
+  font-size: 0.875em;
+}
+
+.prose :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)):is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(174 178 197 / var(--tw-text-opacity));
+}
+
+.prose :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.prose :where(ul):not(:where([class~="not-prose"],[class~="not-prose"] *)):is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(174 178 197 / var(--tw-text-opacity));
+}
+
+.prose :where(strong):not(:where([class~="not-prose"],[class~="not-prose"] *)):is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(131 135 173 / var(--tw-text-opacity));
+}
+
+.prose :where(strong):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  font-weight: 600;
+}
+
 @media (prefers-color-scheme: dark) {
   .single-post hr {
     border-color: #1f2937;
   }
+}
+
+.ghost-display * {
+  font-family: var(--font-body);
+}
+
+.ghost-display *:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(174 178 197 / var(--tw-text-opacity));
 }
 
 h1, .h1 {
