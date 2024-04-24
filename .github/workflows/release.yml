@@ -25,6 +25,37 @@ jobs:
         npm install
         gulp zip
 
+    # Step to list all releases
+    - name: Get list of releases
+      id: get_releases
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const response = await github.rest.repos.listReleases({
+            owner: context.repo.owner,
+            repo: context.repo.repo
+          });
+          return response.data.map(release => ({ id: release.id, tag_name: release.tag_name }));
+
+    # Step to delete all previous releases and tags
+    - name: Delete old releases and tags
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const releases = ${{ steps.get_releases.outputs.result }};
+          for (const release of releases) {
+            await github.rest.repos.deleteRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              release_id: release.id
+            });
+            await github.rest.git.deleteRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: 'tags/' + release.tag_name
+            });
+          }
+
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
