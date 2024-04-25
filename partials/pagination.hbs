@@ -2,7 +2,7 @@
 <nav class="flex items-center justify-center -space-x-px pagination card-excerpt" role="navigation">
     <!-- Previous Page Button -->
     <a href="{{#if prev}}{{page_url prev}}{{else}}javascript:void(0);{{/if}}"
-        class="min-h-[38px] min-w-[38px] py-2 px-2.5 inline-flex justify-center items-center gap-x-1.5 text-sm first:rounded-s-lg last:rounded-e-lg border border-dotted border-secondary-400 text-secondary-900 hover:bg-secondary-200 focus:outline-none focus:bg-secondary-200 disabled:opacity-50 disabled:pointer-events-none dark:border-secondary-700 dark:text-secondary-400 dark:hover:bg-secondary-100/10 dark:focus:bg-secondary-100/10 {{#unless prev}} disabled{{/unless}}">
+        class="min-h-[38px] min-w-[38px] py-2 px-2.5 inline-flex justify-center items-center gap-x-1.5 text-sm first:rounded-s-lg last:rounded-e-lg border border-dotted border-slate-400 text-slate-900 hover:bg-slate-200 focus:outline-none focus:bg-slate-200 disabled:opacity-50 disabled:pointer-events-none dark:border-slate-700 dark:text-slate-400 dark:hover:bg-slate-100/10 dark:focus:bg-slate-100/10 {{#unless prev}} disabled{{/unless}}">
         <svg class="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
             stroke-linejoin="round">
@@ -12,13 +12,13 @@
     </a>
     <!-- Dynamic Page Indicator -->
     <p href="{{url}}"
-        class="min-h-[38px] page-number min-w-[38px] flex justify-center items-center border border-dotted border-secondary-400 text-secondary-900 hover:bg-secondary-200 py-2 px-3 text-sm first:rounded-s-lg last:rounded-e-lg focus:outline-none focus:bg-secondary-100 disabled:opacity-50 disabled:pointer-events-none dark:border-secondary-700 dark:text-secondary-400 dark:hover:bg-transparent dark:focus:bg-secondary-100/10">
+        class="min-h-[38px] page-number min-w-[38px] flex justify-center items-center border border-dotted border-slate-400 text-slate-900 hover:bg-slate-200 py-2 px-3 text-sm first:rounded-s-lg last:rounded-e-lg focus:outline-none focus:bg-slate-100 disabled:opacity-50 disabled:pointer-events-none dark:border-slate-700 dark:text-slate-400 dark:hover:bg-transparent dark:focus:bg-slate-100/10">
         {{t "Page {current_page} of {total_pages}" current_page=page total_pages=pages}}
     </p>
 
     <!-- Next Page Button -->
     <a href="{{#if next}}{{page_url next}}{{else}}javascript:void(0);{{/if}}"
-        class="min-h-[38px] min-w-[38px] py-2 px-2.5 inline-flex justify-center items-center gap-x-1.5 text-sm first:rounded-s-lg last:rounded-e-lg border border-dotted border-secondary-400 text-secondary-900 hover:bg-secondary-200 focus:outline-none focus:bg-secondary-200 disabled:opacity-50 disabled:pointer-events-none dark:border-secondary-700 dark:text-secondary-400 dark:hover:bg-secondary-100/10 dark:focus:bg-secondary-100/10 {{#unless next}} disabled{{/unless}}">
+        class="min-h-[38px] min-w-[38px] py-2 px-2.5 inline-flex justify-center items-center gap-x-1.5 text-sm first:rounded-s-lg last:rounded-e-lg border border-dotted border-slate-400 text-slate-900 hover:bg-slate-200 focus:outline-none focus:bg-slate-200 disabled:opacity-50 disabled:pointer-events-none dark:border-slate-700 dark:text-slate-400 dark:hover:bg-slate-100/10 dark:focus:bg-slate-100/10 {{#unless next}} disabled{{/unless}}">
         <span class="hidden sm:block">Next</span>
         <svg class="flex-shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
