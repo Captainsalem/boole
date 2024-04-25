@@ -1,7 +1,9 @@
 {{!< default}}
 <main class="items-center justify-center">
-{{> hero}}
-{{> image-slider}}
+{{#is "home"}}
+  {{> hero}}
+  {{> image-slider}}
+{{/is}}
 
 <h1 class=" mt-24 text-xl text-center font-extrabold leading-none tracking-tight text-slate-900 dark:text-slate-300">
       All Posts
