@@ -52,4 +52,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 
+<style>
+:root {
+  --font-body: var(--font-system);
+  --font-headings: var(--font-system);
+  {{#if @custom.secondary_color}}
+  --secondary: {{@custom.secondary_color}};
+  {{/if}}
+}
+</style>
 </html>
