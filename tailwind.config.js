@@ -4,29 +4,32 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
-      colors: {},
-      aspectRatio: {
-        '4/3': '4 / 3',
-        '5/4': '5 / 4',
+      colors: {
+        primary: 'var(--ghost-accent-color)',
+        secondary: 'var(--secondary)'
       },
-      zIndex: {
-        '2': '2',
-        '1': '1',
-        '9': '9'
+        aspectRatio: {
+          '4/3': '4 / 3',
+          '5/4': '5 / 4',
+        },
+        zIndex: {
+          '2': '2',
+          '1': '1',
+          '9': '9'
+        },
+        rotate: {
+          '-220': '-220deg',
+          '-155': '-155deg',
+          '-147': '-147deg'
+        },
+        backgroundSize: {
+          '2': '2px',
+        },
+        maxWidth: {
+          '41': '41%',
+        },
       },
-      rotate: {
-        '-220': '-220deg',
-        '-155': '-155deg',
-        '-147': '-147deg'
-      },
-      backgroundSize: {
-        '2': '2px',
-      },
-      maxWidth: {
-        '41': '41%',
-      },
-    }
-  },
+    },
   plugins: [
     require('@tailwindcss/typography'),
   ],

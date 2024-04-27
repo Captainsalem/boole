@@ -6,8 +6,8 @@ as |tiers|
 <div class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 card-excerpt">
     <!-- Title -->
     <div class="mx-auto mb-10 max-w-2xl text-center lg:mb-14">
-        <h2 class="text-2xl font-bold dark:text-secondary-100 md:text-4xl md:leading-tight">Membership</h2>
-        <p class="mt-1 text-secondary-600 dark:text-secondary-400">
+        <h2 class="text-2xl font-bold dark:text-slate-100 md:text-4xl md:leading-tight">Membership</h2>
+        <p class="mt-1 text-slate-600 dark:text-slate-400">
             Choose your subscription plan and get access to different member-only
             benefits.</p>
     </div>
@@ -16,19 +16,19 @@ as |tiers|
     <div class="mb-4 flex justify-center">
         <div class="flex items-center">
             <label for="toggle-count-switch"
-                class="mr-2 inline-block cursor-pointer text-sm text-secondary-800 dark:text-secondary-200">
+                class="mr-2 inline-block cursor-pointer text-sm text-slate-800 dark:text-slate-200">
                 Monthly
             </label>
             <div
-                class="switch relative h-7 w-[3.25rem] cursor-pointer rounded-full bg-secondary-200 transition-colors duration-200 ease-in-out dark:bg-secondary-700">
+                class="switch relative h-7 w-[3.25rem] cursor-pointer rounded-full bg-slate-200 transition-colors duration-200 ease-in-out dark:bg-slate-700">
                 <input id="toggle-count-switch" name="toggle-count-switch" role="switch" type="checkbox" checked
                     onchange="onDataPlanSwitch()"
                     class="js-plan-toggle absolute z-10 h-full w-full cursor-pointer opacity-0" />
                 <span
-                    class="handle absolute left-0 top-0 h-7 w-7 rounded-full bg-primary-200 shadow transition-transform duration-200"></span>
+                    class="handle absolute left-0 top-0 h-7 w-7 rounded-full bg-purple-200 shadow transition-transform duration-200"></span>
             </div>
             <label for="toggle-count-switch"
-                class="ml-2 inline-block cursor-pointer text-sm text-secondary-800 dark:text-secondary-200">
+                class="ml-2 inline-block cursor-pointer text-sm text-slate-800 dark:text-slate-200">
                 Annual
             </label>
         </div>
@@ -39,21 +39,21 @@ as |tiers|
     <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:items-center">
         {{#foreach tiers}}
         <!-- Card -->
-        <div class="flex flex-col rounded-xl border border-dotted border-secondary-200 p-8 text-center dark:border-secondary-700 hover-glow card-excerpt">
-            <h4 class="text-lg font-medium text-secondary-800 dark:text-secondary-200">{{name}}</h4>
+        <div class="flex flex-col rounded-lg border border-dotted border-slate-200 p-8 text-center dark:border-slate-700 hover-glow card-excerpt">
+            <h4 class="text-lg font-medium text-slate-800 dark:text-slate-200">{{name}}</h4>
 
             {{#match type "free"}}
-            <span class="mt-7 text-5xl font-bold text-secondary-800 dark:text-secondary-200">{{price 0 currency="USD"}}</span>
+            <span class="mt-7 text-5xl font-bold text-slate-800 dark:text-slate-200">{{price 0 currency="USD"}}</span>
             {{/match}}
 
             {{#if monthly_price}}
-            <span data-plan="monthly" class="mt-7 text-5xl font-bold text-secondary-800 dark:text-secondary-200">{{price
+            <span data-plan="monthly" class="mt-7 text-5xl font-bold text-slate-800 dark:text-slate-200">{{price
                 monthly_price currency=currency}}
                 <span class="text-xs">{{t "/month"}}</span></span>
             {{/if}}
 
             {{#if yearly_price}}
-            <span data-plan="annual" class="price mt-7 text-5xl font-bold text-secondary-800 dark:text-secondary-200">{{price
+            <span data-plan="annual" class="price mt-7 text-5xl font-bold text-slate-800 dark:text-slate-200">{{price
                 yearly_price currency=currency}}
                 <span class="text-xs">{{t "/year"}}</span>
             </span>
@@ -67,7 +67,7 @@ as |tiers|
             </div>
             {{/if}}
 
-            <p class="mt-2 text-sm text-secondary-500">{{description}}</p>
+            <p class="mt-2 text-sm text-slate-500">{{description}}</p>
             <ul class="mt-7 space-y-2.5 text-sm">
                 {{#foreach benefits as |benefit|}}
                 <li class="flex space-x-2">

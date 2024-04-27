@@ -73,7 +73,12 @@
           "Inconsolata"
         ],
         "default": "System font"
-      }
+      },
+    "secondary_color": {
+        "type": "color",
+        "default": "#333FFF",
+        "description": "Set the secondary color for the theme"
+    }
     }
   },
   "dependencies": {
