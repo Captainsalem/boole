@@ -2,7 +2,7 @@
   <div class="featured mx-auto max-w-7xl gap-8 justify-between flex flex-wrap">
     <!-- Older Post Section -->
     <article
-      class="max-w-[512px] flex-grow flex-shrink basis-[280px] p-6 border-dotted border-secondary-400 dark:border-secondary-800 flex flex-wrap rounded-lg reverse-me border shadow-sm hover-glow"
+      class="max-w-[512px] flex-grow flex-shrink basis-[280px] p-6 border-dotted border-slate-400 dark:border-slate-800 flex flex-wrap rounded-lg reverse-me border shadow-sm hover-glow"
     >
       <div class="mr-4 w-24 leading-6 rounded-lg">
         <!-- Fetching older posts excluding the current post -->
@@ -24,7 +24,7 @@
         {{#get "posts" filter="primary_tag:{{primary_tag.slug}}+published_at:<'{{published_at}}'+id:-{{id}}" limit="1" order="published_at desc"}}
           {{#foreach posts}}
         <h3
-          class="h6 text-xl hover:text-primary-500 gradient-underline relative after:absolute after:inset-x-0 after:bottom-0 after:origin-bottom-left"
+          class="h6 text-xl hover:text-purple-500 gradient-underline relative after:absolute after:inset-x-0 after:bottom-0 after:origin-bottom-left"
         >
           <a href="{{url}}">{{title}}</a>
         </h3>
@@ -33,7 +33,7 @@
       </div>
     </article>
     <article
-      class="featured-card max-w-[512px] flex-grow flex-shrink basis-[280px] p-6 border-dotted border-secondary-400 dark:border-secondary-800 flex flex-wrap rounded-lg border shadow-sm hover-glow"
+      class="featured-card max-w-[512px] flex-grow flex-shrink basis-[280px] p-6 border-dotted border-slate-400 dark:border-slate-800 flex flex-wrap rounded-lg border shadow-sm hover-glow"
     >
       <div class="mr-4 w-24 leading-6 rounded-lg">
         {{#get "posts" filter="primary_tag:{{primary_tag.slug}}+published_at:>'{{published_at}}'" limit="1" order="published_at asc"}}
@@ -54,7 +54,7 @@
         {{#get "posts" filter="primary_tag:{{primary_tag.slug}}+published_at:>'{{published_at}}'" limit="1" order="published_at asc"}}
         {{#foreach posts}}
         <h3
-          class="h6 text-xl hover:text-primary-500 gradient-underline relative after:absolute after:inset-x-0 after:bottom-0 after:origin-bottom-left"
+          class="h6 text-xl hover:text-purple-500 gradient-underline relative after:absolute after:inset-x-0 after:bottom-0 after:origin-bottom-left"
         >
           <a href="{{url}}">{{title}}</a>
         </h3>
