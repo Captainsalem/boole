@@ -20,13 +20,9 @@
       </div>
       <div>
         <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Secondary Navigation</h2>
-        <ul class="text-gray-500 dark:text-gray-400 font-medium">
-          {{#foreach @site.secondary_navigation}}
-          <li class="mb-4">
-            <a href="{{url}}" class="hover:underline">{{label}}</a>
-          </li>
-          {{/foreach}}
-        </ul>
+        {{#if @site.secondary_navigation}}
+        {{navigation type="secondary"}}
+        {{/if}}
       </div>
       <div>
         <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Categories</h2>
