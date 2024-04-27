@@ -1,7 +1,18 @@
-<ul class="text-gray-500 dark:text-gray-400 font-medium">
+
+{{#if isSecondary}}
+  <ul class="text-gray-500 dark:text-gray-400 font-medium">
           {{#foreach navigation type="secondary"}}
           <li class="mb-4">
             <a href="{{url}}" class="hover:underline">{{label}}</a>
           </li>
           {{/foreach}}
         </ul>
+{{else}}
+  <ul class="flex gap-5 max-xl:hidden">
+  {{#foreach navigation}}
+    <li>
+      <a href="{{url}}">{{label}}</a>
+    </li>
+  {{/foreach}}
+</ul>
+{{/if}}
