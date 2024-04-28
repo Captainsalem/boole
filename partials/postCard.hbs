@@ -9,22 +9,20 @@
         <div class="flex flex-col justify-between flex-grow pl-8 pr-8 pt-2 pb-2">
             <div>
             <div class="flex flex-wrap mt-4">
-                {{#if featured}}
                 {{#primary_tag}}
-                <a href="{{url}}"
-                    class="index-tag text-sm dark:text-slate-400 inline-flex items-center relative card-excerpt z-[1] pr-4 pl-4 leading-6 h-7 border border-dotted border-slate-800 rounded-lg bg-transparent transition-all"
-                    {{#if
-                    accent_color}}style="--color-accent: {{accent_color}}; border-color: var(--color-accent); color: var(--color-accent);"
-                    {{/if}}>
-                    {{name}}
+            <a href="{{url}}"
+                class="index-tag text-sm dark:text-slate-400 inline-flex items-center relative card-excerpt z-[1] pr-4 pl-4 leading-6 h-7 border border-dotted border-slate-800 rounded-lg bg-transparent transition-all"
+                {{#if accent_color}}style="--color-accent: {{accent_color}}; border-color: var(--color-accent); color: var(--color-accent);"{{/if}}>
+                {{name}}
+                {{#if ../featured}} <!--  path change to check the post's 'featured' status -->
                     <span
                         style="color: inherit; width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center;"
-                        class=" pl-1">
+                        class="pl-1">
                         {{> "icons/fire"}}
                     </span>
-                </a>
-                {{/primary_tag}}
                 {{/if}}
+            </a>
+        {{/primary_tag}}
             </div>
                 <h4
                     class="block text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 mt-4">
@@ -37,7 +35,7 @@
                 </p>
                 {{else}}
                 <p class="block card-excerpt mt-3 text-sm antialiased leading-relaxed text-slate-700 dark:text-slate-400">
-                    {{excerpt}}
+                    {{excerpt characters="143"}}
                 </p>
                 {{/if}}
             </div>
