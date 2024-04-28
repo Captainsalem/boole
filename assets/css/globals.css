@@ -407,3 +407,8 @@ hr, blockquote, .kg-card.kg-header-card {
   height: 400px;
   @apply rounded-lg;
 }
+
+.gh-announcement-bar.accent {
+  @apply rounded-lg text-sm bg-gradient-to-br from-primary to-secondary;
+  font-family: var(--font-body);
+}
