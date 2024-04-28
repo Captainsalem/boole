@@ -54,7 +54,7 @@
         "width": 2000
       }
     },
-    "posts_per_page": 1,
+    "posts_per_page": 12,
     "card_assets": true,
     "custom": {
       "use_portal_links": {
