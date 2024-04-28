@@ -2482,10 +2482,6 @@ video {
   font-weight: 800;
 }
 
-.font-light {
-  font-weight: 300;
-}
-
 .font-medium {
   font-weight: 500;
 }
@@ -3455,6 +3451,18 @@ single-post .kg-file-card:is(.dark *) {
   width: 700px;
   height: 400px;
   border-radius: 0.5rem;
+}
+
+.gh-announcement-bar.accent {
+  border-radius: 0.5rem;
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  --tw-gradient-from: var(--ghost-accent-color) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: var(--secondary) var(--tw-gradient-to-position);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-family: var(--font-body);
 }
 
 .dark\:prose-invert:is(.dark *) {
