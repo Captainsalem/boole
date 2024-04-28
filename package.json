@@ -22,7 +22,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.19",
     "gscan": "^3.5.1",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-livereload": "^4.0.2",
     "gulp-zip": "^5.0.1",
     "postcss": "^8.4.38",
@@ -54,7 +54,7 @@
         "width": 2000
       }
     },
-    "posts_per_page": 12,
+    "posts_per_page": 1,
     "card_assets": true,
     "custom": {
       "use_portal_links": {
@@ -74,11 +74,11 @@
         ],
         "default": "System font"
       },
-    "secondary_color": {
+      "secondary_color": {
         "type": "color",
         "default": "#333FFF",
         "description": "Set the secondary color for the theme"
-    }
+      }
     }
   },
   "dependencies": {
