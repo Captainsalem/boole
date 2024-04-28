@@ -122,9 +122,7 @@ hr, blockquote, .kg-card.kg-header-card {
   }
 }
 
-button {
-  @apply bg-gradient-to-br from-primary to-secondary rounded-lg font-bold text-white hover:bg-gradient-to-bl;
-}
+
 
 .kg-card-hascaption {
   @apply text-sm text-center;
@@ -270,7 +268,7 @@ button {
 
 .single-post .kg-product-card-image {
   @apply justify-center col-span-2 rounded-lg;
-}
+} 
 
 .single-post .kg-product-card-title-container {
     @apply col-span-2;
