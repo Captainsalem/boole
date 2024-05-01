@@ -15,10 +15,12 @@
     </div>
     <div
       class="my-8 max-w-md mx-auto bg-transparent backdrop-blur-lg border dark:border-slate-800 border-dotted rounded-2xl p-8">
-      <form method="post" class="space-y-3">
+      <form data-members-form class="space-y-3">
+        
         <label for="name" class="sr-only">Name</label>
         <label for="email-address" class="sr-only">Email address</label>
         <input
+          data-members-name
           id="name"
           type="name"
           autocomplete="name"
@@ -26,6 +28,7 @@
           placeholder="Your name"
         />
         <input
+          data-members-email
           id="email-address"
           type="email"
           autocomplete="email"
@@ -39,6 +42,8 @@
           tabindex="-1"
           autocomplete="off"
         />
+        <p class="text-blue-500 card-excerpt" data-members-success></p>
+      <p class="text-red-500 card-excerpt" data-members-error></p>
         <button
           type="submit"
           class="flex w-full card-excerpt items-center border-none justify-center rounded-lg border btn-gradient-2 py-3 text-base font-medium text-slate-100 hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-purple-100 focus:ring-offset-2 focus:ring-offset-purple-700"

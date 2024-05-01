@@ -22,7 +22,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.19",
     "gscan": "^3.5.1",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-livereload": "^4.0.2",
     "gulp-zip": "^5.0.1",
     "postcss": "^8.4.38",
@@ -74,11 +74,24 @@
         ],
         "default": "System font"
       },
-    "secondary_color": {
+      "dark_theme_logo": {
+        "type": "image"
+      },
+      "custom_cta_button": {
+        "type": "text",
+        "default": "Join Now, its free",
+        "group": "homepage"
+      },
+      "custom_cta_url": {
+        "type": "text",
+        "default": "/signup",
+        "group": "homepage"
+      },
+      "secondary_color": {
         "type": "color",
         "default": "#333FFF",
         "description": "Set the secondary color for the theme"
-    }
+      }
     }
   },
   "dependencies": {

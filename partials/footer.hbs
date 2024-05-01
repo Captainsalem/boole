@@ -9,10 +9,10 @@
         </a>
       </div>
       <div>
-        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Primary Navigation</h2>
-        <ul class="text-gray-500 dark:text-gray-400 font-medium">
+        <h2 class="mb-6 text-xs font-semibold text-gray-900 uppercase dark:text-white">Primary Navigation</h2>
+        <ul class="text-gray-500 dark:text-gray-400 text-sm">
           {{#foreach navigation}}
-          <li class="mb-4">
+          <li class="mb-4 text-sm">
             <a href="{{url}}" class="hover:underline">{{label}}</a>
           </li>
           {{/foreach}}
@@ -29,7 +29,7 @@
         <ul class="text-gray-500 dark:text-gray-400 font-medium">
           {{#get "tags" order="count.posts desc" include="count.posts" limit="4"}}
           {{#foreach tags}}
-          <li class="mb-4">
+          <li class="mb-4 text-sm">
             <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}}</a>
           </li>
           {{/foreach}}

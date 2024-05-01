@@ -33,16 +33,6 @@
     </div>
   </div>
 
-<img class="post-image"
-    srcset="{{img_url feature_image size="s"}} 300w,
-            {{img_url feature_image size="m"}} 600w,
-            {{img_url feature_image size="l"}} 1000w,
-            {{img_url feature_image size="xl"}} 2000w"
-    sizes="(max-width: 1000px) 400px, 700px"
-    src="{{img_url feature_image size="m"}}"
-    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-/>
-
   {{> navbar}}
   {{{body}}}
   {{> footer}}
@@ -50,6 +40,56 @@
   {{!-- prims.js script file --}}
   <script src="{{asset 'js/prism.js'}}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+    // Create a modal div and set its style
+    const modal = document.createElement('div');
+    modal.style.display = 'none';
+    modal.style.position = 'fixed';
+    modal.style.left = '0';
+    modal.style.top = '0';
+    modal.style.width = '100%';
+    modal.style.height = '100%';
+    modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+    modal.style.zIndex = '1000';
+    modal.style.justifyContent = 'center';
+    modal.style.alignItems = 'center';
+    modal.style.cursor = 'zoom-out';
+
+    // Append the modal to the body
+    document.body.appendChild(modal);
+
+    // Function to zoom in the image
+    document.querySelectorAll('.post-content img').forEach(function(image) {
+        image.style.cursor = "zoom-in";
+        if (image.title === '') {
+            image.title += "(click to zoom)";
+        } else {
+            image.title += " (click to zoom)";
+        }
+
+        image.onclick = function(event) {
+            event.preventDefault();
+            const img = document.createElement('img');
+            img.src = image.src;
+            img.style.maxWidth = '90%';
+            img.style.maxHeight = '90%';
+            img.style.margin = 'auto';
+            img.style.display = 'block';
+            // Clear previous content and add new image
+            modal.innerHTML = '';
+            modal.appendChild(img);
+            modal.style.display = 'flex';  // Show the modal
+        };
+    });
+
+    // Function to close the modal on click
+    modal.onclick = function() {
+        modal.style.display = 'none';  // Hide the modal
+    };
+});
+</script>
 </body>
 
 <style>
