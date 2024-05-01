@@ -338,7 +338,9 @@ hr, blockquote, .kg-card.kg-header-card {
     fill: currentColor;
     opacity: 0.15;
 }
-
+.text-gradient {
+  @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+}
 .kg-product-card-rating-active.kg-product-card-rating-star svg {
     opacity: 1;
 }
