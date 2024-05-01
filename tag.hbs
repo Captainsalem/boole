@@ -1,50 +1,32 @@
 {{!< default }}
 <!-- tag.hbs -->
+{{#tag}} 
+  <div class="mx-auto max-w-2xl py-20">
+    {{#if feature_image}}
+    <div class="flex justify-center items-center">
+      <figure>
+        <img src="{{feature_image}}" alt="{{name}}" class="w-48 h-48 rounded-full mx-auto transition-all duration-500 object-cover border border-purple-500 group-hover:border-indigo-600 opacity-50 blur-xs" />
+      </figure>
+    </div>
+    {{/if}}
 
-<!-- Everything inside of #tag pulls data from the tag -->
-<section class="max-w-7xl mx-auto my-16">
-  {{#tag}}
-
-    <header class="relative flex justify-center">
-      {{#if feature_image}}
-        <img
-          class="w-full rounded-2xl h-96 object-cover feature-img"
-          src="{{feature_image}}"
-          alt="{{name}}"
-        />
-        <figcaption
-      class="absolute card-excerpt bottom-8 left-2/4 flex w-[calc(100%-4rem)] -translate-x-2/4 justify-between rounded-lg border border-dotted border-slate-400 dark:border-slate-800 bg-white/10 py-4 px-6 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm">
-      <div>
-        <h5
-          class="block text-2xl antialiased font-mediumbold leading-snug tracking-normal text-slate-200 dark:text-slate-400">
-          {{name}}
-        </h5>
-        <p class="block mt-2 text-base antialiased font-normal leading-relaxed text-slate-200 dark:text-slate-400">
-          {{description}}
-        </p>
+    <div class="text-center py-5 card-excerpt">
+      <h1 class="text-4xl capitalize font-bold tracking-tight text-gray-900 dark:text-gray-100">{{name}}</h1>
+      <div class="inline-flex items-center justify-center w-full">
+        <hr class="w-64 h-px my-8 bg-slate-400 border-0 dark:bg-slate-800">
+        <span class="absolute px-3 font-medium text-gray-900 -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900">{{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
       </div>
-    </figcaption>
-      {{/if}}
-    </header>
-  {{/tag}}
+      <p class="mt-8 text-base leading-6 text-gray-600 dark:text-gray-400">{{description}}</p>
+    </div>
+  </div>
+{{/tag}}
+
 {{#if posts}}
-  <div class="mx-auto my-20 grid justify-center  gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+  <div class="mx-auto mt-2 mb-8 grid justify-center gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
     {{#foreach posts}}
       {{> postCard }}
     {{/foreach}}
   </div>
 {{/if}}
-  </div>
+{{pagination}}
 
-  {{!-- Pagination --}}
-  {{pagination}}
-</section>
-
-
-<style>
-  .feature-img {
-    filter: blur(2px) brightness(35%) opacity(95%);
-    -webkit-filter: blur(2px) brightness(35%) opacity(95%);
-    -moz-filter: blur(2px) brightness(35%) opacity(95%);
-  }
-</style>
