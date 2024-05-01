@@ -74,9 +74,6 @@
         ],
         "default": "System font"
       },
-      "dark_theme_logo": {
-        "type": "image"
-      },
       "custom_cta_button": {
         "type": "text",
         "default": "Join Now, its free",
