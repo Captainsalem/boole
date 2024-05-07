@@ -10,6 +10,18 @@
 /*********************************************************
 * General
 */
+
+:root {
+  --tw-prose-pre-bg: rgba(31, 41, 55, 0.02);  /* Light mode background */
+}
+
+/* Define dark mode variable */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tw-prose-pre-bg: rgba(2, 6, 23, 0.6);  /* Dark mode background */
+  }
+}
+
 pre[class*="language-"],
 code[class*="language-"] {
   color: #5c6e74;
