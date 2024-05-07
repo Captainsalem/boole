@@ -1,9 +1,10 @@
 {
-  "name": "porto",
-  "version": "0.0.1",
+  "name": "boole",
+  "version": "1.0.0",
+  "description": "a minimimal ghost theme with focus on reading/writing",
   "author": {
-    "name": "J4y J3ff",
-    "email": "gaspergvj@gmail.com"
+    "name": "geekbits",
+    "email": "team@geekbits.io"
   },
   "keywords": [
     "ghost-theme"
