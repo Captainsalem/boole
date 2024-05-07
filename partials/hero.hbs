@@ -1,34 +1,27 @@
-<section
-  class="m-4 items-center justify-center space-y-6 pb-8 pt-6 md:pt-10 lg:pt-32"
->
+<section class="m-4 items-center justify-center space-y-6 pb-8 pt-6 md:pt-10 lg:pt-32">
   <div class="container flex max-w-7xl flex-col m-auto items-center gap-4 text-center">
-    <h1 class="text-center font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gradient">
+    <h1 class="text-center mb-4 h-full font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gradient py-4">
       {{@site.title}}
     </h1>
-    <p class="max-w-2xl leading-normal py-4 text-slate-700 dark:text-slate-300 sm:text-xl sm:leading-8 card-excerpt">
+    <p class="max-w-2xl leading-normal py-4 text-slate-600 dark:text-slate-400 sm:text-xl sm:leading-8 card-excerpt">
       {{@site.description}}
     </p>
   </div>
   <div class="flex items-center justify-center">
 
-    <button class="py-2 px-4 md:py-4 md:px-6 btn-gradient" type="button">
-  {{#if @custom.custom_cta_button}}
-    {{#if @custom.custom_cta_url}}
-      <!-- Both custom_cta_button and custom_cta_url are set -->
-      <a href="{{@custom.custom_cta_url}}">{{@custom.custom_cta_button}}</a>
-    {{else}}
-      <!-- Only custom_cta_button is set, use default href -->
-      <a href="/signin">{{@custom.custom_cta_button}}</a>
-    {{/if}}
-  {{else}}
-    {{#if @custom.custom_cta_url}}
-      <!-- Only custom_cta_url is set, use default button text -->
-      <a href="{{@custom.custom_cta_url}}">Sign In</a>
-    {{else}}
-      <!-- Neither is set, use default text and href -->
-      <a href="/signin">Join Now, its free</a>
-    {{/if}}
-  {{/if}}
-</button>
+    <div class="w-full sm:w-5/12 card-excerpt">
+      <form data-members-form="subscribe"
+        class="flex rounded-full bg-transparent/10 dark:bg-transparent/20 px-2 py-2 focus-within:ring-1 focus-within:ring-slate-800 hover:ring-1 hover:ring-slate-800">
+        <input
+          class="w-full appearance-none bg-transparent dark:text-slate-400 text-slate-600 focus:outline-none rounded-full pl-4 text-xs"
+          placeholder="Your Email Address">
+        <button
+          class="ml-2 shrink-0 rounded-full px-3 py-1 0  text-sm font-medium btn-gradient focus:outline-none focus:ring-2 focus:ring-cyan-600/50"
+          type="submit">Subscribe</button>
+        <p data-members-success class="card-excerpt absolute text-xs leading-tight pt-12 text-primaryfont-medium"></p>
+        <p data-members-error class="card-excerpt absolute text-xs leading-tight pt-12 text-red-500 font-medium"></p>
+      </form>
+      <p class="text-red-500 text-xs" data-members-error></p>
+    </div>
   </div>
 </section>
