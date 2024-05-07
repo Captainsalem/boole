@@ -89,7 +89,11 @@
       </div>
       <h2 class="text-lg leading-6 font-bold mb-4 text-slate-800 hover:text-slate-600 dark:text-slate-300 mt-4"><a
           href="{{url}}">{{title}}</a></h2>
-      <div class="dark:text-slate-300 text-xs h-auto overflow-hidden leading-5 card-excerpt">{{excerpt}}</div>
+      {{#if custom_excerpt}}
+      <div class="dark:text-slate-300 text-xs h-auto overflow-hidden leading-5 card-excerpt">{{custom_excerpt}}</div>
+      {{else}}
+      <div class="dark:text-slate-300 text-xs h-auto overflow-hidden leading-5 card-excerpt">{{excerpt characters="125"}}</div>
+      {{/if}}
     </article>
     {{/foreach}}
     {{/get}}
