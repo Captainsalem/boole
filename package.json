@@ -75,16 +75,6 @@
         ],
         "default": "System font"
       },
-      "custom_cta_button": {
-        "type": "text",
-        "default": "Join Now, its free",
-        "group": "homepage"
-      },
-      "custom_cta_url": {
-        "type": "text",
-        "default": "/signup",
-        "group": "homepage"
-      },
       "secondary_color": {
         "type": "color",
         "default": "#333FFF",
