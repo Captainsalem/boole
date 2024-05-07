@@ -8,9 +8,10 @@
 {{#get "posts" limit="1" include="tags,authors"}}
 {{#foreach posts}}
   <div
-    class="col-span-full lg:col-span-7 hero-big p-6 rounded-lg border shadow-sm flex-col hero-big bg-transparent border-dotted border-slate-300 dark:border-slate-800 hover-glow" style="background: url('{{feature_image}}');">
+    class="relative col-span-full lg:col-span-7 hero-big p-6 rounded-lg border shadow-sm flex-col hero-big bg-transparent border-dotted border-slate-300 dark:border-slate-800 hover-glow" >
+    <div class="absolute inset-0 blur-lg" style="background: url('{{feature_image}}'); filter: blur(10px);"></div>
     <div class="min-h-full flex items-center justify-center">
-      <article class="hero-big rounded-lg flex-col hero-big bg-transparent">
+      <article class="hero-big rounded-lg flex-col hero-big bg-transparent" style="filter: blur(0px);">
       <div class="flex flex-wrap mt-4">
         {{#if featured}}
         {{#primary_tag}}
@@ -51,6 +52,10 @@
     </article> 
     </div> 
   </div>
+
+
+
+            
   {{/foreach}}
    {{/get}}
   <!-- end main featured section -->
