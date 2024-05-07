@@ -5,8 +5,8 @@
   {{/if}}
   {{else if @member}}
   {{!-- For free member show paid plans only --}}
-  {{> member-tiers type="paid"}}
+  {{> members/member-tiers type="paid"}}
   {{else}}
   {{!-- Show all plans --}}
-  {{> member-tiers type="free,paid"}}
+  {{> members/member-tiers type="free,paid"}}
   {{/if}}

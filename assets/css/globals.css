@@ -15,6 +15,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 a {
   color: var(--ghost-primary);
+  @apply hover:underline transition-all;
 }
 .single-post h1,
 .single-post h2,
@@ -389,13 +390,13 @@ hr, blockquote, .kg-card.kg-header-card {
     @apply rounded-lg;
   }
 
-  single-post .kg-file-card {
+.single-post .kg-file-card {
     @apply rounded-lg border border-dotted border-slate-900 dark:border-slate-800;
   }
 
   .single-post td {
     font-family: var(--font-body);
-    @apply text-slate-900 dark:text-slate-400;
+    @apply text-slate-900 dark:text-slate-300;
   }
 
   .single-post .kg-embed-card {
