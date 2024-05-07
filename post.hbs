@@ -11,7 +11,7 @@
   {{#if featured}}
     {{#primary_tag}}
     <a href="{{url}}"
-      class="index-tag text-sm dark:text-slate-300 inline-flex items-center relative card-excerpt z-[1] pr-4 pl-4 leading-6 h-7 border border-dotted border-slate-800 rounded-lg bg-transparent transition-all"
+      class="index-tag text-sm dark:text-slate-400 inline-flex items-center relative card-excerpt z-[1] pr-4 pl-4 leading-6 h-7 border border-dotted border-slate-800 rounded-lg bg-transparent transition-all"
       {{#if accent_color}}style="--color-accent: {{accent_color}}; border-color: var(--color-accent); color: var(--color-accent);"{{/if}}>
       {{name}}
       <span style="color: inherit; width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center;" class=" pl-1">
@@ -90,7 +90,7 @@
                 {{#if access}}
                 {{! post content }}
                 <div class="flex flex-wrap justify-center gap-8 max-w-3xl mr-auto ml-auto prose dark:prose-invert">
-                    <div class="text-lg max-w-3xl min-w-96 flex-1 post-content dark:text-slate-300 ">
+                    <div class="text-lg max-w-3xl min-w-96 flex-1 post-content dark:text-slate-400 ">
                         {{content}}
                     </div>
                     {{else}}
