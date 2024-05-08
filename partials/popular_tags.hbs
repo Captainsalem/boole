@@ -1,6 +1,6 @@
 <div class="mt-16 mb-16">
   <div class="container max-w-7xl mx-auto w-full pr-4 pl-4 mr-auto ml-auto">
-    <h2 class="text-center card-excerpt text-slate-900 dark:text-slate-400 mb-8 text-2xl font-bold">Popular Categories</h2>
+    <h2 class="text-sm font-semibold uppercase text-slate-900 dark:text-slate-400 border-slate-900 dark:border-slate-800 border-b border-dotted mb-10 pb-2.5">Popular Categories</h2>
     {{#get "tags" limit="8" include="count.posts" order="count.posts desc"}}
       <div class="flex justify-center flex-wrap gap-6 ">
         {{#foreach tags}}
