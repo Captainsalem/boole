@@ -19,8 +19,9 @@ routes:
   /tags/:
     template: tags
     # data: page.tags # active - data is be taken from the  "/tags/" page
-  /search/:
-    template: search
+  /welcome/:
+    template: welcome
+    
   /recommendations/:
     template: recommend
     # data: page.recommendations # When implemented data will be taken from the  "/recommendations/" page
