@@ -1,4 +1,6 @@
-{{!< default }} <div
+{{!< default }}
+{{#if @member}}
+<div
     class="mx-auto max-w-7xl rounded-lg border border-dotted bg-transparent px-5 py-10 dark:border-slate-800 sm:py-20 card-excerpt">
     <div class="mx-auto max-w-[490px]">
         <img src="{{asset 'svg/illustration-02.svg'}}" alt="illustration">
@@ -19,3 +21,9 @@
         </div>
     </div>
     </div>
+    {{else}}
+    <script>window.location = '{{@site.url}}/signin/';</script>
+    {{/if}}
+    
+
+    {{!-- show page only if signed in --}}
